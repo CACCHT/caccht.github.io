@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CACCHT — Creating Annotated Corpora of Classical Hebrew Texts</title>
+<meta name="description" content="CACCHT builds linguistically annotated Text-Fabric datasets of ancient Semitic texts — the Dead Sea Scrolls, Syriac, the Samaritan Pentateuch, the Targums, Ugaritic and the Septuagint — free to use for research and education.">
+<link rel="canonical" href="https://caccht.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CACCHT — Creating Annotated Corpora of Classical Hebrew Texts">
+<meta property="og:description" content="Linguistically annotated Text-Fabric datasets of ancient Semitic texts, free for research and education.">
+<meta property="og:url" content="https://caccht.github.io/">
+<meta property="og:image" content="https://caccht.github.io/assets/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.png" sizes="64x64" type="image/png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Hebrew:wght@400;600&family=Noto+Sans+Syriac:wght@400;600&family=Noto+Sans+Ugaritic&family=Noto+Sans+Samaritan&family=Noto+Serif:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#top">
+      <img class="brand__mark" src="assets/logo.png" alt="" width="512" height="512">
+      <span class="brand__name">CACCHT</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#corpora">Corpora</a>
+      <a href="#method">Method</a>
+      <a href="#publications">Publications</a>
+      <a href="#team">Team</a>
+      <a class="nav__gh" href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__in">
+    <div class="hero__text">
+      <p class="eyebrow">Creating Annotated Corpora of Classical Hebrew Texts</p>
+      <h1 class="hero__title">Ancient Semitic<br>texts, published<br>as <em>data</em>.</h1>
+      <p class="lead">CACCHT prepares linguistically annotated editions of ancient Semitic texts and releases them openly, so that a question about grammar, syntax or textual variation can be answered by running code over a whole corpus.</p>
+      <p class="tally"><span>Six corpora</span><span>Five scripts</span><span>One annotation system</span></p>
+      <div class="cta">
+        <a class="btn btn--solid" href="#corpora">Browse the corpora</a>
+        <a class="btn" href="https://github.com/CACCHT">The GitHub organization<span aria-hidden="true"> ↗</span></a>
+      </div>
+    </div>
+
+    <!-- The CACCHT mark -->
+    <figure class="mark">
+      <img class="mark__img" src="assets/caccht-logo.png" alt="The CACCHT roundel: aleph, alpha, olaph and the Ugaritic alpa in four quadrants" width="1024" height="1024">
+      <figcaption class="mark__cap">Hebrew &middot; Greek &middot; Syriac &middot; Ugaritic</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Corpora -->
+<section class="band band--ink" id="corpora">
+  <div class="wrap">
+    <header class="shead">
+      <p class="label">Corpora</p>
+      <h2 class="shead__h">Six datasets, free to use</h2>
+      <p class="shead__p">Every dataset is a <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric</a> dataset: text and annotations stored as a graph of nodes and features, read straight into Python. Some carry word-level annotation only; others add phrase and clause structure.</p>
+    </header>
+
+    <div class="grid">
+
+      <article class="card" data-accent="navy">
+        <div class="card__top"><span class="card__glyph" data-script="hebrew">א</span><span class="card__tag">Active</span></div>
+        <h3 class="card__h">The Dead Sea Scrolls</h3>
+        <p class="card__p">Biblical and non-biblical scrolls, transcribed and annotated word by word.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Hebrew square</dd>
+          <dt>Source</dt><dd>Transcriptions provided by Martin Abegg</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/etcbc/dss">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.8268196">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-NC 4.0</span></p>
+      </article>
+
+      <article class="card" data-accent="green">
+        <div class="card__top"><span class="card__glyph" data-script="syriac">ܐ</span><span class="card__tag">In progress</span></div>
+        <h3 class="card__h">The ETCBC Syriac Corpus</h3>
+        <p class="card__p">Peshitta books, the Syrohexapla Psalms, and post-biblical prose including Ephrem and the Book of the Laws of the Countries.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Syriac, with the consonantal text in Estrangela</dd>
+          <dt>Source</dt><dd>The ETCBC database of Syriac literature</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/etcbc/syriac">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.16966129">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-NC 4.0</span></p>
+      </article>
+
+      <article class="card" data-accent="ochre">
+        <div class="card__top"><span class="card__glyph" data-script="samaritan">ࠀ</span><span class="card__tag">In progress</span></div>
+        <h3 class="card__h">The Samaritan Pentateuch</h3>
+        <p class="card__p">The Pentateuch with word-level annotations in BHSA style, plus phrase-atom and clause-atom boundaries.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Samaritan</dd>
+          <dt>Source</dt><dd>Samaritanus project, Halle-Wittenberg (ed. Stefan Schorch): MS Dublin Chester Beatty 751 and MS Garizim 1</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/DT-UCPH/sp">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.7734632">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-NC 4.0</span></p>
+      </article>
+
+      <article class="card" data-accent="oxblood">
+        <div class="card__top"><span class="card__glyph" data-script="hebrew">א</span><span class="card__tag">Alpha</span></div>
+        <h3 class="card__h">The ETCBC Targum Corpus</h3>
+        <p class="card__p">Pseudo-Jonathan, the Fragment Targums, the Cairo Genizah fragments and Neofiti — with scribal variants kept as first-order data rather than flattened away.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Aramaic square</dd>
+          <dt>Pipeline</dt><dd>SQL to XML to Text-Fabric, included in the repository</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/ETCBC/targum">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.21925395">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">MIT</span></p>
+      </article>
+
+      <article class="card" data-accent="terracotta">
+        <div class="card__top"><span class="card__glyph" data-script="ugaritic">&#x10380;</span><span class="card__tag">In progress</span></div>
+        <h3 class="card__h">The Copenhagen Ugaritic Corpus</h3>
+        <p class="card__p">278 tablets of <em>Die keilalphabetischen Texte aus Ugarit</em>, annotated down to tablet, column, line and side, with certainty marked on individual signs and alternative readings recorded.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Ugaritic alphabetic cuneiform</dd>
+          <dt>With</dt><dd>Tania Notarius (University of the Free State) and assistants at Polis, Jerusalem</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/dt-ucph/cuc">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.10695308">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-NC 4.0</span></p>
+      </article>
+
+      <article class="card" data-accent="violet">
+        <div class="card__top"><span class="card__glyph" data-script="greek">Α</span><span class="card__tag">In development</span></div>
+        <h3 class="card__h">The Septuagint</h3>
+        <p class="card__p">A Text-Fabric edition of the Greek text, under construction at CenterBLC. The repository holds the conversion pipeline and the dataset as it grows.</p>
+        <dl class="facts">
+          <dt>Script</dt><dd>Greek</dd>
+          <dt>Status</dt><dd>No release yet — follow the repository</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/CenterBLC/MT-LXX">Repository<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Method -->
+<section class="band band--parch" id="method">
+  <div class="wrap">
+    <header class="shead shead--dark">
+      <p class="label">Method</p>
+      <h2 class="shead__h">One annotation system, adapted per language</h2>
+    </header>
+
+    <div class="method">
+      <div class="method__col">
+        <h3 class="method__h">We follow the BHSA</h3>
+        <p>The <a href="https://etcbc.github.io/bhsa">Biblia Hebraica Stuttgartensia Amstelodamensis</a> — the annotated Masoretic Text maintained by the <a href="https://etcbc.nl">ETCBC</a> — sets the conventions. CACCHT follows them and adapts them where a language or a text demands it, so that features keep the same meaning across corpora and a query written for one dataset largely survives the move to another.</p>
+        <p class="chips" aria-label="Word-level features in the Syriac corpus">
+          <span class="chip">g_cons</span><span class="chip">lex</span><span class="chip">gloss</span><span class="chip">sp</span><span class="chip">vs</span><span class="chip">vt</span><span class="chip">ps</span><span class="chip">gn</span><span class="chip">nu</span><span class="chip">vo</span><span class="chip">st</span><span class="chip">ls</span><span class="chip">trailer</span>
+        </p>
+        <p class="caption">Word-level features in the Syriac corpus. Each dataset documents its own set.</p>
+      </div>
+
+      <div class="method__col">
+        <h3 class="method__h">Read it with Text-Fabric</h3>
+        <p>Nothing needs downloading by hand. Point <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric</a> at a dataset and it fetches the data, then gives you nodes, features and a search language over them — in a Jupyter notebook, or in the browser it ships with.</p>
+        <p>The same datasets can be read with <a href="https://context-fabric.ai/">Context-Fabric</a>, an API-compatible engine that loads them with a far smaller memory footprint and exposes them to AI agents over MCP.</p>
+        <pre class="code"><code><span class="c-k">from</span> tf.app <span class="c-k">import</span> use
+A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
+        <pre class="code"><code>tf dt-ucph/sp</code></pre>
+        <p class="caption">The Samaritan Pentateuch, in a notebook and in the Text-Fabric browser.</p>
+      </div>
+
+      <div class="method__col">
+        <h3 class="method__h">Open by default</h3>
+        <p>Every dataset lives in a public repository, and each release is archived with a DOI at Zenodo. All of them are free to use for research and education. Licenses differ per corpus, so check the card above and cite the release you actually used.</p>
+        <a class="tool" href="https://martijnnaaijer.github.io/mt-sp-parallels/index.html">
+          <span class="tool__label">Tool</span>
+          <span class="tool__h">MT–SP Parallels</span>
+          <span class="tool__p">Read the Masoretic Text and the Samaritan Pentateuch side by side, verse by verse, built on the BHSA and the CACCHT SP data.<span class="tool__go" aria-hidden="true"> ↗</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications -->
+<section class="band band--ink" id="publications">
+  <div class="wrap">
+    <header class="shead">
+      <p class="label">Publications</p>
+      <h2 class="shead__h">How the annotations are made, written up</h2>
+    </header>
+    <ol class="pubs">
+      <li class="pub">
+        <p class="pub__y">2026</p>
+        <div class="pub__b">
+          <h3 class="pub__h">Identifying Phrase Boundaries in the Samaritan Pentateuch with Machine Learning</h3>
+          <p class="pub__a">Cantanhêde, S. d. O., Naaijer, M., Højgaard, C. C., &amp; Glanz, O. — <em>Religions</em> 17(2), 192.</p>
+          <a class="pub__l" href="https://doi.org/10.3390/rel17020192">10.3390/rel17020192<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </li>
+      <li class="pub">
+        <p class="pub__y">2024</p>
+        <div class="pub__b">
+          <h3 class="pub__h">Text-Fabric Dataset of the Samaritan Pentateuch</h3>
+          <p class="pub__a">Naaijer, M., Højgaard, C. C., Schorch, S., &amp; Ehrensvärd, M. — <em>Research Data Journal for the Humanities and Social Sciences</em> 9(1), 1–13.</p>
+          <a class="pub__l" href="https://doi.org/10.1163/24523666-bja10051">10.1163/24523666-bja10051<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </li>
+      <li class="pub">
+        <p class="pub__y">2023</p>
+        <div class="pub__b">
+          <h3 class="pub__h">A Transformer-based parser for Syriac morphology</h3>
+          <p class="pub__a">Naaijer, M., Sikkel, C., Coeckelbergs, M., Attema, J., &amp; Van Peursen, W. Th. — <em>Proceedings of the Ancient Language Processing Workshop</em>, Varna, 23–29.</p>
+          <a class="pub__l" href="https://aclanthology.org/2023.alp-1.3.pdf">ACL Anthology<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="band band--parch" id="team">
+  <div class="wrap">
+    <header class="shead shead--dark">
+      <p class="label">Team</p>
+      <h2 class="shead__h">A collaboration of six</h2>
+      <p class="shead__p">CACCHT works together with specialists in each field to build the datasets.</p>
+    </header>
+    <ul class="people">
+      <li><span class="people__n">Martijn Naaijer</span><span class="people__i">University of Zurich</span></li>
+      <li><span class="people__n">Willem van Peursen</span><span class="people__i">Vrije Universiteit Amsterdam</span></li>
+      <li><span class="people__n">Oliver Glanz</span><span class="people__i">Andrews University</span></li>
+      <li><span class="people__n">Christian Canu Højgaard</span><span class="people__i">Fjellhaug International University College</span></li>
+      <li><span class="people__n">Martin Ehrensvärd</span><span class="people__i">University of Copenhagen</span></li>
+      <li><span class="people__n">Robert Rezetko</span><span class="people__i">University of Copenhagen</span></li>
+    </ul>
+    <p class="thanks">With Stefan Schorch and the Samaritanus project, Martin Abegg, Tania Notarius, Maria Simion, Lynn Strietzel, Ben Shields and Elijah Labowe-Stoll, and colleagues at the <a href="https://etcbc.nl">ETCBC</a> and DANS.</p>
+  </div>
+</section>
+
+<section class="closer">
+  <div class="wrap closer__in">
+    <h2 class="closer__h">Use the data. Cite the release.</h2>
+    <p class="closer__p">The datasets are free for research and education. Each repository states how to cite it.</p>
+    <a class="btn btn--solid" href="https://github.com/CACCHT">Open the GitHub organization<span aria-hidden="true"> ↗</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img class="foot__mark" src="assets/logo.png" alt="CACCHT" width="512" height="512">
+    <div class="foot__t">
+      <p class="foot__name">Creating Annotated Corpora of Classical Hebrew Texts</p>
+      <p class="foot__p">Datasets are published under their own licenses; see each repository. This site is maintained in <a href="https://github.com/CACCHT/caccht.github.io">caccht.github.io</a>.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Elsewhere">
+      <a href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+      <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://context-fabric.ai/">Context-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.github.io/bhsa">BHSA<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.nl">ETCBC<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
