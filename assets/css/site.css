@@ -120,7 +120,20 @@ img { max-width: 100%; height: auto; display: block; }
 .nav a:hover { color: var(--parchment); border-bottom-color: var(--flame); }
 .nav__gh { color: var(--parchment) !important; }
 @media (max-width: 720px) {
-  .nav a:not(.nav__gh) { display: none; }
+  /* Keep every section reachable on a phone: scroll the row, don't hide it. */
+  .topbar__in { gap: 0.75rem; }
+  .brand { flex: none; }
+  .nav {
+    min-width: 0;
+    gap: 1.1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; }
 }
 
 /* ── Hero ────────────────────────────────────────────── */
@@ -168,6 +181,14 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: 46ch;
   font-size: 1.12em;
   color: rgba(240, 229, 208, 0.86);
+}
+
+.hero__meta {
+  margin: -0.6rem 0 1.7rem;
+  max-width: 46ch;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--parch-dim);
 }
 
 .tally {
@@ -496,6 +517,9 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase; letter-spacing: 0.09em;
 }
 .foot__p { margin: 0; font-size: 0.86rem; color: var(--parch-dim); max-width: 58ch; }
+.foot__p a { color: var(--parchment); text-underline-offset: 0.18em; }
+.foot__p a:hover { color: var(--flame); }
+.foot__contact { margin-bottom: 0.45rem; }
 .foot__nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
 .foot__nav a {
   font-family: var(--f-mono); font-size: 0.76rem;
