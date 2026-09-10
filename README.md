@@ -35,6 +35,8 @@ index.html          the page
 assets/css/site.css styles
 assets/js/site.js   script specimen and scroll reveals
 assets/*.png        the CACCHT logo and favicons
+robots.txt          crawling rules, points at the sitemap
+sitemap.xml         the one URL, for search engines
 ```
 
 To work on it, open `index.html` in a browser, or serve the folder:
