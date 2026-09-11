@@ -429,6 +429,18 @@ img { max-width: 100%; height: auto; display: block; }
 .tool__p { display: block; font-size: 0.92rem; color: rgba(22, 35, 58, 0.78); }
 .tool__go { color: var(--oxblood); white-space: nowrap; }
 
+/* ── Tools ──────────────────────────────────── */
+
+.band--parch + .band--parch { border-top: 1px solid rgba(22, 35, 58, 0.16); }
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  align-items: start;
+}
+.tools .tool { height: 100%; }
+
 /* ── Publications ────────────────────────────────────── */
 
 .pubs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }

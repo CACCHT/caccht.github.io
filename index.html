@@ -32,6 +32,7 @@
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#corpora">Corpora</a>
+      <a href="#tools">Tools</a>
       <a href="#method">Method</a>
       <a href="#publications">Publications</a>
       <a href="#team">Team</a>
@@ -82,7 +83,7 @@
 
       <article class="card" data-accent="navy">
         <div class="card__top"><span class="card__glyph" data-script="hebrew">א</span><span class="card__tag">Released</span></div>
-        <h3 class="card__h">The Dead Sea Scrolls</h3>
+        <h3 class="card__h">The CACCHT Dead Sea Scrolls</h3>
         <p class="card__p">Biblical and non-biblical scrolls, transcribed and annotated word by word.</p>
         <dl class="facts">
           <dt>Source</dt><dd>Transcriptions provided by Martin Abegg</dd>
@@ -144,6 +145,45 @@
   </div>
 </section>
 
+<!-- Tools -->
+<section class="band band--parch" id="tools">
+  <div class="wrap">
+    <header class="shead shead--dark">
+      <p class="label">Tools</p>
+      <h2 class="shead__h">Reading the witnesses side by side</h2>
+      <p class="shead__p">Browser tools built on annotated data. Each one sets parallel witnesses next to each other, chapter by chapter and verse by verse, and is free to use. All of them are work in progress, so expect the data and the interfaces to keep changing.</p>
+    </header>
+
+    <div class="tools">
+
+      <a class="tool" href="https://martijnnaaijer.github.io/mt-sp-parallels/index.html">
+        <span class="tool__label">Tool</span>
+        <span class="tool__h">MT–SP Parallels</span>
+        <span class="tool__p">Read the Masoretic Text and the Samaritan Pentateuch side by side, verse by verse, built on the BHSA and the CACCHT SP data.<span class="tool__go" aria-hidden="true"> ↗</span></span>
+      </a>
+
+      <a class="tool" href="https://martijnnaaijer.github.io/mt_dss_hebrew_bible/">
+        <span class="tool__label">Tool</span>
+        <span class="tool__h">The Hebrew Bible: MT and the Dead Sea Scrolls</span>
+        <span class="tool__p">Every verse of the Masoretic Text next to whatever the Judaean Desert manuscripts preserve of it, across 262 scrolls. Reconstructed letters are marked as such, and the chapter index shows at a glance which chapters are attested at all.<span class="tool__go" aria-hidden="true"> ↗</span></span>
+      </a>
+
+      <a class="tool" href="https://martijnnaaijer.github.io/mt_dss_jeremiah/">
+        <span class="tool__label">Tool</span>
+        <span class="tool__h">The Short Edition of Jeremiah at Qumran</span>
+        <span class="tool__p">Jeremiah in three traditions: the Masoretic Text, the Old Greek and the six Jeremiah scrolls from the Judaean Desert. It shows where 4QJerᵇ and 4QJerᵈ follow the shorter Greek edition, down to whether the missing verses would physically fit the fragment.<span class="tool__go" aria-hidden="true"> ↗</span></span>
+      </a>
+
+      <a class="tool" href="https://martijnnaaijer.github.io/mt_greek_jeremiah/index.html">
+        <span class="tool__label">Tool</span>
+        <span class="tool__h">Textkritische Synopse zum Jeremiabuch</span>
+        <span class="tool__p">A synopsis by Hermann-Josef Stipp: the Hebrew of Jeremiah beside a Hebrew retroversion of the Alexandrian Greek, for all 52 chapters plus 2 Kings 25. Hover a word for its lexeme and grammatical parsing, and ketiv-qere readings are flagged.<span class="tool__go" aria-hidden="true"> ↗</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- Method -->
 <section class="band band--parch" id="method">
   <div class="wrap">
@@ -175,11 +215,6 @@ A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
       <div class="method__col">
         <h3 class="method__h">Open by default</h3>
         <p>Every dataset lives in a public repository, and each release is archived with a DOI at Zenodo. All of them are free to use for research and education. Licenses differ per corpus, so check the card above and cite the release you actually used.</p>
-        <a class="tool" href="https://martijnnaaijer.github.io/mt-sp-parallels/index.html">
-          <span class="tool__label">Tool</span>
-          <span class="tool__h">MT–SP Parallels</span>
-          <span class="tool__p">Read the Masoretic Text and the Samaritan Pentateuch side by side, verse by verse, built on the BHSA and the CACCHT SP data.<span class="tool__go" aria-hidden="true"> ↗</span></span>
-        </a>
       </div>
     </div>
   </div>
@@ -357,7 +392,7 @@ A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
     {
       "@type": "Dataset",
       "@id": "https://doi.org/10.5281/zenodo.8268196",
-      "name": "The Dead Sea Scrolls (Text-Fabric dataset)",
+      "name": "The CACCHT Dead Sea Scrolls (Text-Fabric dataset)",
       "description": "Biblical and non-biblical Dead Sea Scrolls, transcribed and annotated word by word. Transcriptions provided by Martin Abegg.",
       "url": "https://github.com/etcbc/dss",
       "isAccessibleForFree": true,
