@@ -18,6 +18,7 @@
   --terracotta: #c2603f;
   --oxblood:    #6f1f1c;
   --ochre:      #8f6b32;
+  --umber:      #5b3a24;
 
   /* lightened for use on the ink ground */
   --l-hebrew:    #86a3d8;
@@ -307,6 +308,7 @@ img { max-width: 100%; height: auto; display: block; }
 .card[data-accent="oxblood"]    { --card-accent: var(--oxblood); }
 .card[data-accent="terracotta"] { --card-accent: var(--terracotta); }
 .card[data-accent="violet"]     { --card-accent: var(--violet); }
+.card[data-accent="umber"]      { --card-accent: var(--umber); }
 .card:hover { background: #f5ecda; }
 
 .card__top {

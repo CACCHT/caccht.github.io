@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CACCHT — Creating Annotated Corpora of Classical Hebrew Texts</title>
-<meta name="description" content="CACCHT builds linguistically annotated Text-Fabric datasets of ancient Semitic texts — the Dead Sea Scrolls, Syriac, the Samaritan Pentateuch, the Targums, Ugaritic and the Septuagint — free to use for research and education.">
+<meta name="description" content="CACCHT builds linguistically annotated Text-Fabric datasets of ancient Semitic texts — the Dead Sea Scrolls, the Aleppo Codex, Syriac, the Samaritan Pentateuch, the Targums, Ugaritic and the Septuagint — free to use for research and education.">
 <link rel="canonical" href="https://caccht.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CACCHT — Creating Annotated Corpora of Classical Hebrew Texts">
@@ -55,7 +55,7 @@
         CACCHT is an initiative of Robert Rezetko and Martijn Naaijer (PI).<br>
         Get in touch: <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>
       </p>
-      <p class="tally"><span>Six corpora</span><span>Five scripts</span><span>One annotation system</span></p>
+      <p class="tally"><span>Seven corpora</span><span>Five scripts</span><span>One annotation system</span></p>
       <div class="cta">
         <a class="btn btn--solid" href="#corpora">Browse the corpora</a>
         <a class="btn" href="https://github.com/CACCHT">The GitHub organization<span aria-hidden="true"> ↗</span></a>
@@ -75,7 +75,7 @@
   <div class="wrap">
     <header class="shead">
       <p class="label">Corpora</p>
-      <h2 class="shead__h">Six datasets, free to use</h2>
+      <h2 class="shead__h">Seven datasets, free to use</h2>
       <p class="shead__p">Every dataset is a <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric</a> dataset: text and annotations stored as a graph of nodes and features, read straight into Python. Some carry word-level annotation only; others add phrase and clause structure.</p>
     </header>
 
@@ -89,6 +89,16 @@
           <dt>Source</dt><dd>Transcriptions provided by Martin Abegg</dd>
         </dl>
         <p class="card__links"><a href="https://github.com/etcbc/dss">Repository<span aria-hidden="true"> ↗</span></a><a href="https://doi.org/10.5281/zenodo.8268196">DOI<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-NC 4.0</span></p>
+      </article>
+
+      <article class="card" data-accent="umber">
+        <div class="card__top"><span class="card__glyph" data-script="hebrew">א</span><span class="card__tag">Early release</span></div>
+        <h3 class="card__h">The Aleppo Codex</h3>
+        <p class="card__p">The Hebrew Bible according to the Aleppo Codex, segmented and annotated in BHSA style, with every word mapped to its BHSA word and every verse marked for whether it survives in the codex.</p>
+        <dl class="facts">
+          <dt>Source</dt><dd>מקרא על פי המסורה, Hebrew Wikisource</dd>
+        </dl>
+        <p class="card__links"><a href="https://github.com/MartijnNaaijer/aleppo">Repository<span aria-hidden="true"> ↗</span></a><span class="lic">CC BY-SA 4.0</span></p>
       </article>
 
       <article class="card" data-accent="green">
@@ -318,7 +328,7 @@ A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
   </div>
 </footer>
 
-<!-- Structured data: the organization and the six datasets, for Google Dataset Search. -->
+<!-- Structured data: the organization and the seven datasets, for Google Dataset Search. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -444,6 +454,29 @@ A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
         "name": "Zenodo",
         "url": "https://zenodo.org/"
       }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://caccht.github.io/#aleppo",
+      "name": "The Aleppo Codex (Text-Fabric dataset)",
+      "description": "The Hebrew Bible according to the Aleppo Codex, in the edition Miqra al pi ha-Masorah on Hebrew Wikisource, segmented and annotated in BHSA style, with every word mapped to its BHSA word and every verse marked for whether it survives in the codex.",
+      "url": "https://github.com/MartijnNaaijer/aleppo",
+      "isAccessibleForFree": true,
+      "inLanguage": "hbo",
+      "keywords": [
+        "Aleppo Codex",
+        "Hebrew Bible",
+        "Ancient Hebrew",
+        "linguistic annotation",
+        "Text-Fabric"
+      ],
+      "creator": {
+        "@id": "https://caccht.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://caccht.github.io/#org"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "@type": "Dataset",
