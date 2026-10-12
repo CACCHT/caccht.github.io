@@ -366,6 +366,13 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.04em;
 }
 .lic { color: rgba(22, 35, 58, 0.45); }
+.band--ink .card a.lic { color: rgba(22, 35, 58, 0.55); }
+.band--ink .card a.lic:hover { color: var(--terracotta); }
+
+.corpora__note {
+  margin: clamp(1.8rem, 3.5vw, 2.6rem) 0 0; max-width: 70ch;
+  font-size: 0.95rem; color: rgba(240, 229, 208, 0.78);
+}
 
 /* ── Method ──────────────────────────────────────────── */
 
@@ -496,6 +503,16 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .thanks { margin: 0; max-width: 68ch; font-size: 0.93rem; color: rgba(22, 35, 58, 0.68); }
 
+/* ── Data-use page ───────────────────────────────────── */
+
+.prose { max-width: 68ch; }
+.prose p { margin: 0 0 1.2rem; }
+.prose__note {
+  margin-top: 2rem !important; padding-top: 1rem;
+  border-top: 1px solid rgba(22, 35, 58, 0.16);
+  font-size: 0.93rem; color: rgba(22, 35, 58, 0.68);
+}
+
 /* ── Closer ──────────────────────────────────────────── */
 
 .closer {
@@ -514,6 +531,8 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 0 0.7rem;
 }
 .closer__p { margin: 0 auto 1.9rem; max-width: 48ch; color: rgba(240, 229, 208, 0.78); }
+.closer__p a { color: var(--parchment); text-underline-offset: 0.18em; }
+.closer__p a:hover { color: var(--flame); }
 
 /* ── Footer ──────────────────────────────────────────── */
 
