@@ -50,11 +50,65 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will say what asking in your own words does and doesn&#39;t do, how to set up Claude Desktop and Claude Code, and what goes to Anthropic.</p>
-<h2 id="what-it-does">What it does</h2>
-<h2 id="claude-desktop">Claude Desktop</h2>
-<h2 id="claude-code">Claude Code</h2>
+<p>You can ask Claude, in your own words, for a search: <em>find all cases of &gt;LHJM/ in the BHSA</em>, or <em>clauses where the object comes before the verb</em>. Claude writes a search template, tries it, and sends it to the Explorer. You decide whether it runs. This uses your own Claude subscription, in Claude Desktop or Claude Code.</p>
+<h2 id="what-claude-does-and-what-it-doesn39t">What Claude does, and what it doesn&#39;t</h2>
+<ul>
+<li>Claude writes the <a href="searching.html#templates">search template</a>; the Explorer shows it with Claude&#39;s explanation, so you can read and change it.</li>
+<li>Before sending it, Claude may check the template and try it on a few results, to see that it finds what you asked for.</li>
+<li>Nothing runs by itself: you click <em>Run</em>.</li>
+<li>The results always come from the Explorer&#39;s own search, never from Claude&#39;s text, so they are the same as for a search you had typed yourself.</li>
+<li>The search keeps where it came from (<em>Proposed by Claude, … for: …</em>): in its link, in a saved workspace, and when you cite it.</li>
+</ul>
+<p>Claude can be wrong. Check the template, and look at a few results before you trust a count.</p>
+<h2 id="setting-it-up">Setting it up</h2>
+<p><strong>Always first:</strong> start CACCHT Explorer and keep it running. Claude talks to the running program.</p>
+<h3 id="in-claude-desktop">In Claude Desktop</h3>
+<ol>
+<li>Download <code>CACCHT-Explorer.mcpb</code> from the release (under <em>Assets</em>, next to the program; see <a href="getting-started.html#download">Getting started</a>).</li>
+<li>Install it, in one of these ways:<ul>
+<li>double-click the downloaded file: Claude Desktop opens it and offers to install it; click <em>Install</em>;</li>
+<li>or, in Claude Desktop, go to <em>Settings → Extensions</em>, and choose <em>Install Extension…</em> (under <em>Advanced settings</em>), then the file;</li>
+<li>or drag the file into the <em>Settings → Extensions</em> window.</li>
+</ul>
+</li>
+<li>Check that <em>CACCHT Explorer</em> is switched on under <em>Settings → Extensions</em>.</li>
+<li>Start a new chat. The tools menu (the button below the message box) now lists <em>CACCHT Explorer</em>.</li>
+</ol>
+<p>You need a recent Claude Desktop. The extension needs nothing else: no Python and no Node.js of your own. If your Claude Desktop names its menus differently, look under <em>Extensions</em> for the button that installs one.</p>
+<p><strong>Without the extension</strong> (if installing it doesn&#39;t work): in Claude Desktop, <em>Settings → Developer → Edit Config</em> opens <code>claude_desktop_config.json</code>. Add the program, with its path on your computer, and restart Claude Desktop:</p>
+<pre><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;context-fabric&quot;: {
+      &quot;command&quot;: &quot;C:\\path\\to\\cfabric-browser\\cfabric-browser.exe&quot;,
+      &quot;args&quot;: [&quot;mcp&quot;]
+    }
+  }
+}
+</code></pre>
+<p>On a Mac the command is <code>/Applications/CACCHT Explorer.app/Contents/MacOS/cfabric-browser</code>; on Linux, the path of <code>cfabric-browser/cfabric-browser</code>.</p>
+<h3 id="in-claude-code">In Claude Code</h3>
+<p>In a terminal, once:</p>
+<pre><code>claude mcp add --transport http context-fabric http://127.0.0.1:8107/mcp
+</code></pre>
+<p>8107 is the program&#39;s usual port. If another program had taken it, the log (<code>.cfabric/logs/cfabric-browser.log</code> in your home folder) gives the address with the port the Explorer uses.</p>
+<h2 id="asking">Asking</h2>
+<p>Ask Claude, for instance:</p>
+<ul>
+<li><em>Find all cases of &gt;LHJM/ in the BHSA.</em></li>
+<li><em>All infinitives construct of HLK[.</em></li>
+<li><em>Clauses in Genesis where the subject comes before the verb.</em></li>
+</ul>
+<p>The first time Claude uses a tool, it asks your permission. Claude reads a guide to searching the BHSA, checks its template and tries it, and tells you it has sent a search.</p>
+<p>In the Explorer, the search appears above the search form (in Parallel: click <em>Search</em> in the top bar), with your request, the template, Claude&#39;s explanation and how many results its trial found:</p>
+<p><a href="images/proposal.png"><img src="images/proposal.png" alt="A search proposed by Claude, in Parallel" loading="lazy"></a></p>
+<ul>
+<li><em>Run</em> runs it, as if you had typed it;</li>
+<li><em>Edit</em> puts it in the editor, to change it first;</li>
+<li><em>Dismiss</em> drops it.</li>
+</ul>
+<p>So far Claude knows the BHSA best: its guide to searching covers the BHSA&#39;s features, with worked examples. It can search the Samaritan Pentateuch and the scrolls too, but with less help.</p>
 <h2 id="privacy">Privacy</h2>
+<p>What you ask goes to Anthropic, as anything you ask Claude. The texts stay on your computer, apart from the few results Claude sees when it tries a template. The Explorer answers only programs on your own computer, not other web pages or other computers.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li>Asking Claude</li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
