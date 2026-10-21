@@ -55,6 +55,7 @@
         CACCHT is an initiative of Robert Rezetko and Martijn Naaijer (PI).<br>
         Get in touch: <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>
       </p>
+      <p class="lead">Three of them can be read, searched and compared side by side in <a href="explorer/">CACCHT Explorer</a>, a program for Windows, macOS and Linux that needs no programming.</p>
       <p class="tally"><span>Seven corpora</span><span>Five scripts</span><span>One annotation system</span></p>
       <div class="cta">
         <a class="btn btn--solid" href="#corpora">Browse the corpora</a>
@@ -162,10 +163,16 @@
     <header class="shead shead--dark">
       <p class="label">Tools</p>
       <h2 class="shead__h">Reading the witnesses side by side</h2>
-      <p class="shead__p">Browser tools built on annotated data. Each one sets parallel witnesses next to each other, chapter by chapter and verse by verse, and is free to use. All of them are work in progress, so expect the data and the interfaces to keep changing.</p>
+      <p class="shead__p">A program and browser tools built on annotated data. Each one sets parallel witnesses next to each other, chapter by chapter and verse by verse, and is free to use. All of them are work in progress, so expect the data and the interfaces to keep changing.</p>
     </header>
 
     <div class="tools">
+
+      <a class="tool" href="explorer/">
+        <span class="tool__label">Program</span>
+        <span class="tool__h">CACCHT Explorer</span>
+        <span class="tool__p">Read, search and compare the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls side by side, offline, on Windows, macOS or Linux. Five ways of working, from verse-aligned columns to an interlinear and a concordance, with the BDB dictionary and the JPS 1917 translation to add. A test version: the guide says how to download and start it.<span class="tool__go" aria-hidden="true"> →</span></span>
+      </a>
 
       <a class="tool" href="https://martijnnaaijer.github.io/mt-sp-parallels/index.html">
         <span class="tool__label">Tool</span>
@@ -232,6 +239,7 @@
         <h3 class="method__h">Read it with Text-Fabric</h3>
         <p>Nothing needs downloading by hand. Point <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric</a> at a dataset and it fetches the data, then gives you nodes, features and a search language over them — in a Jupyter notebook, or in the browser it ships with.</p>
         <p>The same datasets can be read with <a href="https://context-fabric.ai/">Context-Fabric</a>, an API-compatible engine that loads them with a far smaller memory footprint and exposes them to AI agents over MCP.</p>
+        <p>Without programming, the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls can be read and searched in <a href="explorer/">CACCHT Explorer</a>, built on Context-Fabric.</p>
         <pre class="code"><code><span class="c-k">from</span> tf.app <span class="c-k">import</span> use
 A = use(<span class="c-s">'dt-ucph/sp'</span>)</code></pre>
         <pre class="code"><code>tf dt-ucph/sp</code></pre>
