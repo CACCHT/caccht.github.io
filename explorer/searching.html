@@ -103,11 +103,17 @@
 </tbody></table>
 <p>The values are the BHSA&#39;s codes, not English words:</p>
 <ul>
-<li><strong>Lexemes</strong> are written in the ETCBC&#39;s transliteration: <code>&gt;</code> א, <code>B</code> ב, <code>G</code> ג, <code>D</code> ד, <code>H</code> ה, <code>W</code> ו, <code>Z</code> ז, <code>X</code> ח, <code>V</code> ט, <code>J</code> י, <code>K</code> כ, <code>L</code> ל, <code>M</code> מ, <code>N</code> נ, <code>S</code> ס, <code>&lt;</code> ע, <code>P</code> פ, <code>Y</code> צ, <code>Q</code> ק, <code>R</code> ר, <code>F</code> שׂ, <code>C</code> שׁ, <code>T</code> ת. A verb ends in <code>[</code> (<code>HLK[</code>), a noun or adjective in <code>/</code> (<code>MLK/</code>), a particle in neither (<code>KJ</code>). <code>=</code> tells homonyms apart: <code>DBR[</code> <em>speak</em>, <code>DBR/</code> <em>word</em>.</li>
-<li><strong>Part of speech</strong> (<code>sp</code>): <code>subs</code> noun, <code>verb</code>, <code>adjv</code> adjective, <code>nmpr</code> proper noun, <code>prep</code> preposition, <code>conj</code> conjunction, <code>art</code> article, <code>nega</code> negation, …</li>
-<li><strong>Stem</strong> (<code>vs</code>): <code>qal</code>, <code>nif</code>, <code>piel</code>, <code>pual</code>, <code>hit</code>, <code>hif</code>, <code>hof</code>, …</li>
-<li><strong>Tense</strong> (<code>vt</code>): <code>perf</code>, <code>impf</code>, <code>wayq</code> wayyiqtol, <code>impv</code>, <code>infc</code>, <code>infa</code>, <code>ptca</code> active participle, <code>ptcp</code> passive participle.</li>
-<li><strong>Person, gender, number, state</strong>: <code>ps=p1|p2|p3</code>, <code>gn=m|f</code>, <code>nu=sg|pl|du</code>, <code>st=a|c</code>.</li>
+<li><p><strong>Lexemes</strong> are written in the ETCBC&#39;s transliteration: <code>&gt;</code> א, <code>B</code> ב, <code>G</code> ג, <code>D</code> ד, <code>H</code> ה, <code>W</code> ו, <code>Z</code> ז, <code>X</code> ח, <code>V</code> ט, <code>J</code> י, <code>K</code> כ, <code>L</code> ל, <code>M</code> מ, <code>N</code> נ, <code>S</code> ס, <code>&lt;</code> ע, <code>P</code> פ, <code>Y</code> צ, <code>Q</code> ק, <code>R</code> ר, <code>F</code> שׂ, <code>C</code> שׁ, <code>T</code> ת. A verb ends in <code>[</code> (<code>HLK[</code>), a noun or adjective in <code>/</code> (<code>MLK/</code>), a particle in neither (<code>KJ</code>), so the ending already separates the verb <code>DBR[</code> <em>speak</em> from the noun <code>DBR/</code> <em>word</em>. Homonyms that would otherwise be written the same get one or more <code>=</code> before the ending: <code>BR&gt;[</code> <em>create</em> and <code>BR&gt;==[</code> <em>cut down</em>, <code>H</code> the article and <code>H=</code> the interrogative he.</p>
+<p>To find how a lexeme is written, look it up in the <a href="words.html#the-lexicon">lexicon</a>: <em>Find</em> takes the Hebrew or an English gloss (<em>create</em>), and each lexeme in the list shows its transliteration, <code>=</code> included. The hover card and the word panel show it too, as <em>transliteration</em>.</p>
+</li>
+<li><p><strong>Part of speech</strong> (<code>sp</code>): <code>subs</code> noun, <code>verb</code>, <code>adjv</code> adjective, <code>nmpr</code> proper noun, <code>prep</code> preposition, <code>conj</code> conjunction, <code>art</code> article, <code>nega</code> negation, …</p>
+</li>
+<li><p><strong>Stem</strong> (<code>vs</code>): <code>qal</code>, <code>nif</code>, <code>piel</code>, <code>pual</code>, <code>hit</code>, <code>hif</code>, <code>hof</code>, …</p>
+</li>
+<li><p><strong>Tense</strong> (<code>vt</code>): <code>perf</code>, <code>impf</code>, <code>wayq</code> wayyiqtol, <code>impv</code>, <code>infc</code>, <code>infa</code>, <code>ptca</code> active participle, <code>ptcp</code> passive participle.</p>
+</li>
+<li><p><strong>Person, gender, number, state</strong>: <code>ps=p1|p2|p3</code>, <code>gn=m|f</code>, <code>nu=sg|pl|du</code>, <code>st=a|c</code>.</p>
+</li>
 </ul>
 <p>You don&#39;t have to know them by heart. While you type, the editor offers the object types and features of the corpus, and after <code>=</code> the values a feature has, with how often each occurs. Hover over a feature for what it means.</p>
 <p><code>|</code> allows several values (<code>ps=p1|p2</code>), <code>#</code> excludes one (<code>prs#absent</code>: with a suffix), and <code>~</code> matches a pattern (<code>nametype~topo</code>).</p>
@@ -122,7 +128,7 @@
   chapter chapter=1
     word lex=&gt;LHJM/
 </code></pre>
-<p><strong>Clauses with הָיָה as predicate</strong> (3,521 in the BHSA):</p>
+<p><strong>Clauses with היה as predicate</strong> (3,521 in the BHSA):</p>
 <pre><code>clause
   phrase function=Pred
     word lex=HJH[

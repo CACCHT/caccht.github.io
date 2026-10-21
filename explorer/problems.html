@@ -50,10 +50,30 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will cover the log file, the port, a corpus that doesn&#39;t open, a slow first start, and how to report a problem.</p>
-<h2 id="the-log-file">The log file</h2>
+<h2 id="the-program-doesn39t-start">The program doesn&#39;t start</h2>
+<ul>
+<li><strong>Windows says <em>Windows protected your PC</em>, or macOS won&#39;t open it.</strong> The program isn&#39;t signed yet; see <a href="getting-started.html#starting-the-program">Starting the program</a> for how to open it anyway.</li>
+<li><strong>On Windows, nothing happens, or the window stays empty.</strong> Right-click the downloaded zip, choose <em>Properties</em>, tick <em>Unblock</em>, and unpack it again. Keep the folder <code>cfabric-browser</code> together: the program needs its <code>_internal</code> folder.</li>
+<li><strong>A message says <em>CACCHT Explorer could not start</em>.</strong> The log says why; see <a href="#the-log">The log</a>.</li>
+<li><strong>On Linux, a web browser opens instead of a window.</strong> The window needs GTK with WebKit2GTK, or Qt with WebEngine. In the web browser, the program works the same.</li>
+</ul>
+<h2 id="it-is-slow">It is slow</h2>
+<ul>
+<li><strong>The first time a corpus opens</strong>, the program prepares it once, which takes from half a minute to a few minutes, the BHSA longest. After that it opens in a few seconds. A new version of the program sometimes prepares the corpora once more.</li>
+<li><strong>A search that takes long</strong> can be stopped with <em>Stop</em>. A search stops by itself after 60 seconds. Searches with many objects at the same level, or without anything to narrow them down, take longest: put the objects inside one another where you can, and add features. See <a href="searching.html#limits">Searching</a>.</li>
+</ul>
+<h2 id="something-doesn39t-work">Something doesn&#39;t work</h2>
+<ul>
+<li><strong>A corpus doesn&#39;t open</strong> (<em>Could not open it: …</em>). Close the program and start it again. If it still fails, delete the corpus&#39; <code>.cfr</code> folder (in <code>text-fabric-data/github/&lt;organisation&gt;/&lt;corpus&gt;/tf/&lt;version&gt;</code> in your home folder): the program then prepares it again. If that doesn&#39;t help, download it again from the library.</li>
+<li><strong>A download fails</strong> (<em>Could not download it: …</em>). Check the internet connection and click <em>Try again</em>; what was downloaded already is kept.</li>
+<li><strong>The page says <em>The browser server cannot be reached</em>.</strong> The program has stopped, or was closed while the page was still open in a web browser. Start the program again and reload the page.</li>
+<li><strong>Hovering over a word shows a single letter</strong>, or the text looks otherwise wrong. If you have your own display settings in <code>.cfabric/display</code> in your home folder, move them away and start the program again: they take precedence over the program&#39;s.</li>
+<li><strong>Claude can&#39;t reach the program.</strong> The program must be running first. See <a href="asking-claude.html#setting-it-up">Asking Claude</a>.</li>
+</ul>
+<h2 id="the-log">The log</h2>
+<p>The program writes what it does, and any error, to a log: <code>.cfabric/logs/cfabric-browser.log</code> in your home folder. It starts afresh each time the program starts. The log also gives the address the program uses, such as <code>http://localhost:8107/</code>: 8107 is the usual port, and if another program has taken it, the Explorer takes the next free one.</p>
 <h2 id="reporting-a-problem">Reporting a problem</h2>
-<p>Please report what goes wrong, and what you would like to see, in an <a href="https://github.com/Context-Fabric/context-fabric/issues" rel="noopener">issue</a> or by email to <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>.</p>
+<p>Please report what goes wrong, and what you would like to see, in an <a href="https://github.com/Context-Fabric/context-fabric/issues" rel="noopener">issue on GitHub</a> or by email to <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>. Say which computer you use (Windows, Mac with Apple silicon or Intel, Linux), which version of the Explorer (in <em>Cite</em>), what you did and what happened, and send the log along.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li>Questions and problems</li></ol>
