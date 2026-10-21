@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asking Claude — CACCHT Explorer</title>
-<meta name="description" content="CACCHT Explorer, a program for reading, searching and comparing the Hebrew Bible, the Samaritan Pentateuch and the Dead Sea Scrolls: Asking Claude.">
+<title>Asking Claude or ChatGPT — CACCHT Explorer</title>
+<meta name="description" content="CACCHT Explorer, a program for reading, searching and comparing the Hebrew Bible, the Samaritan Pentateuch and the Dead Sea Scrolls: Asking Claude or ChatGPT.">
 <link rel="canonical" href="https://caccht.github.io/explorer/asking-claude.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Asking Claude — CACCHT Explorer">
+<meta property="og:title" content="Asking Claude or ChatGPT — CACCHT Explorer">
 <meta property="og:url" content="https://caccht.github.io/explorer/asking-claude.html">
 <meta property="og:image" content="https://caccht.github.io/assets/logo.png">
 <meta name="twitter:card" content="summary">
@@ -46,11 +46,12 @@
   <div class="wrap">
     <header class="shead shead--dark">
       <p class="label">CACCHT Explorer · Guide</p>
-      <h1 class="shead__h">Asking Claude</h1>
+      <h1 class="shead__h">Asking Claude or ChatGPT</h1>
     </header>
 
     <div class="prose">
 <p>You can ask Claude, in your own words, for a search: <em>find all cases of &gt;LHJM/ in the BHSA</em>, or <em>clauses where the object comes before the verb</em>. Claude writes a search template, tries it, and sends it to the Explorer. You decide whether it runs. This uses your own Claude subscription, in Claude Desktop or Claude Code.</p>
+<p>ChatGPT can do the same, in the ChatGPT desktop app and in Codex, with your own ChatGPT subscription; see <a href="#in-chatgpt-or-codex">In ChatGPT or Codex</a>. What this chapter says about Claude holds for ChatGPT too.</p>
 <h2 id="what-claude-does-and-what-it-doesn39t">What Claude does, and what it doesn&#39;t</h2>
 <ul>
 <li>Claude writes the <a href="searching.html#templates">search template</a>; the Explorer shows it with Claude&#39;s explanation, so you can read and change it.</li>
@@ -91,6 +92,22 @@
 <pre><code>claude mcp add --transport http context-fabric http://127.0.0.1:8107/mcp
 </code></pre>
 <p>8107 is the program&#39;s usual port. If another program had taken it, the log (<code>.cfabric/logs/cfabric-browser.log</code> in your home folder) gives the address with the port the Explorer uses.</p>
+<h3 id="in-chatgpt-or-codex">In ChatGPT or Codex</h3>
+<p><strong>New, and not yet tried with ChatGPT itself.</strong> Please tell us how it goes (see <a href="problems.html">Questions and problems</a>).</p>
+<p>The ChatGPT desktop app (Windows and Mac) and Codex, OpenAI&#39;s program for the terminal and code editors, share their settings: what you add in one, the other has too.</p>
+<ul>
+<li><p><strong>In the ChatGPT desktop app:</strong> open <em>Settings → MCP servers</em>, choose <em>Add server</em>, give it the name <code>caccht-explorer</code>, choose <em>STDIO</em>, enter the program&#39;s path as the command (as for Claude Desktop above) and <code>mcp</code> as its argument. Save it, then choose <em>Restart</em>.</p>
+</li>
+<li><p><strong>In Codex,</strong> in a terminal, once (with the program&#39;s path on your computer):</p>
+<pre><code>codex mcp add caccht-explorer -- &quot;C:\path\to\cfabric-browser\cfabric-browser.exe&quot; mcp
+</code></pre>
+</li>
+</ul>
+<p>The first question can take longer than ChatGPT waits by default, because the Explorer starts and opens its corpora first. If ChatGPT says the tool took too long, ask again; or let it wait longer, in <code>config.toml</code> in the folder <code>.codex</code> in your home folder:</p>
+<pre><code class="language-toml">[mcp_servers.caccht-explorer]
+tool_timeout_sec = 300
+</code></pre>
+<p>ChatGPT on the web and on a phone can&#39;t reach a program on your computer, so this works only in the desktop app and in Codex.</p>
 <h2 id="asking">Asking</h2>
 <p>Ask Claude, for instance:</p>
 <ul>
@@ -108,10 +125,10 @@
 </ul>
 <p>So far Claude knows the BHSA best: its guide to searching covers the BHSA&#39;s features, with worked examples. It can search the Samaritan Pentateuch and the scrolls too, but with less help.</p>
 <h2 id="privacy">Privacy</h2>
-<p>What you ask goes to Anthropic, as anything you ask Claude. The texts stay on your computer, apart from the few results Claude sees when it tries a template. The Explorer answers only programs on your own computer, not other web pages or other computers.</p>
+<p>What you ask goes to Anthropic, as anything you ask Claude (or to OpenAI, when you ask ChatGPT). The texts stay on your computer, apart from the few results Claude sees when it tries a template. The Explorer answers only programs on your own computer, not other web pages or other computers.</p>
 
       <h2>Contents of the guide</h2>
-      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li>Asking Claude</li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li>Asking Claude or ChatGPT</li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
 <nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="concordance.html"><span>Previous:</span> The Concordance</a><a rel="next" href="adding-texts.html"><span>Next:</span> Adding texts</a></nav>
     </div>
   </div>
