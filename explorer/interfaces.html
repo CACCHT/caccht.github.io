@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}</style>
+<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,14 +50,74 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will say what each of the five interfaces is for, how to switch between them, and how to hide the ones you don&#39;t use.</p>
+<p>The Explorer has five interfaces for the same texts. The menu at the top right, with the name of the one in use (<em>Parallel ▾</em>), lists them, with a line on what each is for.</p>
+<p><a href="images/menu.png"><img src="images/menu.png" alt="The interface menu" loading="lazy"></a></p>
+<p>When you switch, the passage, the texts, the search and the lexicon go along, so you see the same thing in another way. The program remembers which interface you used last and opens in it next time.</p>
 <h2 id="parallel">Parallel</h2>
+<p>A column per text and a row per verse: the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls line up verse by verse. This is where the program opens.</p>
+<p><a href="images/parallel.png"><img src="images/parallel.png" alt="Parallel: Genesis 1 in the BHSA, the SP and the scrolls" loading="lazy"></a></p>
+<ul>
+<li>The chapter is at the top left: click it to choose a book and chapter; <code>‹</code> and <code>›</code>, or the arrow keys, go to the previous and next chapter.</li>
+<li><em>Texts</em> turns texts on and off and changes their order; <code>–</code> above a column removes it.</li>
+<li>In the column of the scrolls, each verse has a line for every scroll that has it, with the scroll&#39;s name (such as <em>4Q2</em>) next to it.</li>
+<li><em>Differences</em> marks where the texts differ from the first column; see <a href="reading.html#differences">Differences</a>.</li>
+<li><em>Search</em> finds words or constructions, with the results shown in all the texts; see <a href="searching.html">Searching</a>.</li>
+<li><em>Lexicon</em> shows the lexicon of the BHSA in place of the chapter; see <a href="words.html#the-lexicon">The lexicon</a>.</li>
+<li>Clicking a word opens the word panel on the left; see <a href="words.html">Words</a>.</li>
+</ul>
 <h2 id="panes">Panes</h2>
+<p>Corpora side by side, each in its own pane, with its own passage and view. Use Panes when the texts should not follow each other, for instance to read a scroll as a whole next to the BHSA, or to have a search open next to a text.</p>
+<p><a href="images/panes.png"><img src="images/panes.png" alt="Panes: the BHSA next to the scrolls by Bible book" loading="lazy"></a></p>
+<ul>
+<li><em>Add a pane</em> adds a pane, up to four; <em>Close</em> closes one.</li>
+<li>At the top of each pane, choose its corpus and its view: <em>Read</em>, <em>Search</em>, or <em>Lexicon</em> (BHSA).</li>
+<li>The list on the left of a pane (<em>Passages</em> when the pane is narrow) chooses the passage; <em>Previous</em> and <em>Next</em> go through them.</li>
+<li><em>Text</em> shows the text as it runs; <em>Structure</em> shows how it is built up of phrases, clauses and sentences, with their features.</li>
+<li>For the Dead Sea Scrolls, <em>Scrolls</em> reads a scroll as it is, and <em>Bible books</em> reads them by biblical book; see <a href="reading.html#the-scrolls-by-biblical-book">The scrolls by biblical book</a>.</li>
+<li><em>Sync passages</em> makes the other panes follow when you open a passage in one; <em>Show differences</em> marks the words where the panes differ from the first.</li>
+<li><em>Open a corpus</em> opens another corpus from your computer.</li>
+</ul>
 <h2 id="reader">Reader</h2>
+<p>One text in a quiet column, with everything else on request. Chapters follow each other as you scroll.</p>
+<p><a href="images/reader.png"><img src="images/reader.png" alt="The Reader with the panel open at Parallels" loading="lazy"></a></p>
+<ul>
+<li>Choose the text in the box next to <em>Cite</em>.</li>
+<li><em>Verses</em> gives a line per verse; <em>Running text</em> lets the verses run on in paragraphs, which end where the BHSA has a <em>petuhah</em> (פ) or <em>setumah</em> (ס).</li>
+<li>Click a verse to select it. The panel on the right shows, in tabs:<ul>
+<li><em>Parallels</em>: the verse in the other texts (<em>Texts</em> chooses them), with <em>Show differences</em>;</li>
+<li><em>Words</em>: its words with gloss and morphology; click one for all about it;</li>
+<li><em>Lexicon</em>: its lexemes, with <em>All</em> for every verse each one occurs in;</li>
+<li><em>Search</em>: a search for words like one of these, which opens in Parallel;</li>
+<li><em>Notes</em>: your own note on the verse, and a star to bookmark it; see <a href="notes-and-citing.html">Notes, workspaces and citing</a>.</li>
+</ul>
+</li>
+<li><em>Panel</em> opens and closes the panel.</li>
+</ul>
+<p>The Reader can also be dark, as every interface (<em>Dark</em> in the top bar):</p>
+<p><a href="images/reader-dark.png"><img src="images/reader-dark.png" alt="The Reader in running text, dark" loading="lazy"></a></p>
 <h2 id="interlinear">Interlinear</h2>
+<p>Word by word, with lines under each word: by default the transliteration of the lexeme, the gloss and the morphology.</p>
+<p><a href="images/interlinear.png"><img src="images/interlinear.png" alt="The Interlinear: the BHSA with the SP under it and the structure shown" loading="lazy"></a></p>
+<ul>
+<li><em>Lines</em> chooses the lines and their order: <em>Word</em>, <em>Transliteration</em>, <em>Lexeme</em>, <em>Gloss</em>, <em>BDB</em>, <em>Part of speech</em>, <em>Morphology</em>, or any feature of the corpus (<em>Add a feature</em>).</li>
+<li><em>Under</em> puts another text under it, word by word, with its differences marked; a translation gets a line per verse.</li>
+<li><em>Structure</em> shows the phrases with their function (<em>Subj</em>, <em>Pred</em>, <em>Objc</em>, …) and the clauses with their type.</li>
+<li><em>Colour</em> colours the words by part of speech, or the verbs by stem.</li>
+<li><em>Practise</em> hides a line: click a word&#39;s <code>?</code> to see it. Useful for learning vocabulary or parsing.</li>
+<li>Click a word for all its features.</li>
+</ul>
 <h2 id="concordance">Concordance</h2>
-<p>See <a href="concordance.html">The Concordance</a>.</p>
+<p>Search results as lines with the hit in the middle, sorted, filtered and counted. See <a href="concordance.html">The Concordance</a>.</p>
 <h2 id="switching-and-hiding">Switching and hiding</h2>
+<p>Choose an interface in the menu at the top right. What you are looking at goes along:</p>
+<ul>
+<li>the texts and their order;</li>
+<li>the chapter and the verse (numbered as in the BHSA, so that a passage in another text is found by its counterpart);</li>
+<li>the search, the lexeme in the lexicon, and whether differences are shown.</li>
+</ul>
+<p>What an interface can&#39;t show is kept for when you come back to one that can.</p>
+<p><strong>Hiding.</strong> <em>Choose which to offer…</em> in the menu lists the interfaces with a tick box each: untick the ones you don&#39;t use. The one in use can&#39;t be hidden, and Panes and Parallel can&#39;t both be hidden.</p>
+<p><strong>Help.</strong> <em>Guide to …</em> at the bottom of the menu opens this guide where the interface in use is explained. <em>← Back to the Explorer</em> at the top of the guide returns to where you were.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li>The five ways of working</li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
