@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started — CACCHT Explorer</title>
+<meta name="description" content="CACCHT Explorer, a program for reading, searching and comparing the Hebrew Bible, the Samaritan Pentateuch and the Dead Sea Scrolls: Getting started.">
+<link rel="canonical" href="https://caccht.github.io/explorer/getting-started.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Getting started — CACCHT Explorer">
+<meta property="og:url" content="https://caccht.github.io/explorer/getting-started.html">
+<meta property="og:image" content="https://caccht.github.io/assets/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/favicon.png" sizes="64x64" type="image/png">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../">
+      <img class="brand__mark" src="../assets/logo.png" alt="" width="512" height="512">
+      <span class="brand__name">CACCHT</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="../#corpora">Corpora</a>
+      <a href="../#tools">Tools</a>
+      <a href="../#method">Method</a>
+      <a href="../#publications">Publications</a>
+      <a href="../#team">Team</a>
+      <a class="nav__gh" href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="band band--parch">
+  <div class="wrap">
+    <header class="shead shead--dark">
+      <p class="label">CACCHT Explorer · Guide</p>
+      <h1 class="shead__h">Getting started</h1>
+    </header>
+
+    <div class="prose">
+<p>CACCHT Explorer is a program for reading, searching and comparing the Hebrew Bible (the BHSA), the Samaritan Pentateuch and the Dead Sea Scrolls, side by side. It runs on your own computer, needs no internet connection once the texts are there, and you don&#39;t need to install Python or anything else for it. It reads the same data as <a href="https://annotation.github.io/text-fabric/" rel="noopener">Text-Fabric</a>, through Context-Fabric, the engine underneath.</p>
+<p>The Explorer is a test version. Please report what goes wrong, and what you would like to see, in an <a href="https://github.com/Context-Fabric/context-fabric/issues" rel="noopener">issue</a> or by email to <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>.</p>
+<h2 id="download">Download</h2>
+<p>The program is on the <a href="https://github.com/Context-Fabric/context-fabric/releases" rel="noopener">releases page</a> of Context-Fabric on GitHub. Take the newest release whose name begins with a version number (such as <em>0.1.0-test.13</em>), and under <em>Assets</em> the file for your computer:</p>
+<table>
+<thead>
+<tr>
+<th>Computer</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows 10 or 11</td>
+<td><code>CACCHT-Explorer-windows.zip</code></td>
+</tr>
+<tr>
+<td>Mac with Apple silicon (M1 and later)</td>
+<td><code>CACCHT-Explorer-macos-arm64.zip</code></td>
+</tr>
+<tr>
+<td>Mac with an Intel processor</td>
+<td><code>CACCHT-Explorer-macos-x64.zip</code></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><code>CACCHT-Explorer-linux.tar.gz</code></td>
+</tr>
+</tbody></table>
+<p>On a Mac, <em>About This Mac</em> in the Apple menu says which processor you have: <em>Chip Apple M…</em> is Apple silicon.</p>
+<p>The release also has <code>CACCHT-Explorer.mcpb</code>, which you need only for <a href="asking-claude.html">asking Claude</a>.</p>
+<h2 id="starting-the-program">Starting the program</h2>
+<p>The program isn&#39;t signed yet, so your computer warns about it the first time.</p>
+<p><strong>Windows.</strong> Unpack the zip, open the folder <code>cfabric-browser</code> and double-click <code>cfabric-browser.exe</code>. If Windows says <em>Windows protected your PC</em>, click <em>More info</em> and then <em>Run anyway</em>. Keep the folder together: the program needs the <code>_internal</code> folder next to it. If the window doesn&#39;t open, right-click the downloaded zip before unpacking it, choose <em>Properties</em>, tick <em>Unblock</em>, and unpack it again.</p>
+<p><strong>macOS.</strong> Unpack the zip and move <code>CACCHT Explorer.app</code> to <em>Applications</em>. The first time, right-click it, choose <em>Open</em>, and then <em>Open</em> again. If macOS only offers to move it to the bin, go to <em>System Settings → Privacy &amp; Security</em> and click <em>Open Anyway</em>.</p>
+<p><strong>Linux.</strong> Unpack it (<code>tar -xzf CACCHT-Explorer-linux.tar.gz</code>) and start <code>cfabric-browser/cfabric-browser</code>. The window needs GTK with WebKit2GTK, or Qt with WebEngine. Without them, the program opens your web browser instead, which works just as well.</p>
+<h2 id="the-first-start">The first start</h2>
+<p>If the texts are not on your computer yet, the program shows <em>Getting the corpora</em>, with the three it offers:</p>
+<table>
+<thead>
+<tr>
+<th>Corpus</th>
+<th>Version</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BHSA (Hebrew Bible)</td>
+<td>2021</td>
+<td>34 MB</td>
+</tr>
+<tr>
+<td>Samaritan Pentateuch</td>
+<td>7.2.4</td>
+<td>4 MB</td>
+</tr>
+<tr>
+<td>Dead Sea Scrolls</td>
+<td>2.0.1</td>
+<td>30 MB</td>
+</tr>
+</tbody></table>
+<p>Click <em>Download (68 MB)</em>. Each corpus is downloaded from its own release on GitHub, unpacked and then prepared once, so that it opens quickly afterwards. You see the progress of each. The download takes less than a minute on a fast connection; preparing takes a few minutes in all, the BHSA longest. Then the program opens in <a href="interfaces.html#parallel">Parallel</a>, with the three texts next to each other.</p>
+<p><em>Not now</em> skips this. You can download the corpora later in <em>Texts → Add a text…</em>, under <em>Can be downloaded</em>. Without an internet connection, the program says so and offers <em>Try again</em>.</p>
+<p>If you have used Text-Fabric with these corpora, the program finds them and downloads nothing; it only prepares them the first time it opens them.</p>
+<p><a href="datasets.html">The datasets</a> says what each corpus is and what the program shows of it.</p>
+<h2 id="where-the-data-is-kept">Where the data is kept</h2>
+<p>Everything the program keeps is in your home folder (on Windows <code>C:\Users\&lt;you&gt;</code>, on a Mac <code>/Users/&lt;you&gt;</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>What is in it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>text-fabric-data/github</code></td>
+<td>The corpora, where Text-Fabric keeps them too, and the translations you add. Next to each corpus a folder <code>.cfr</code> holds what the program prepared (for the BHSA about 600 MB).</td>
+</tr>
+<tr>
+<td><code>.cfabric/dictionaries</code></td>
+<td>The dictionaries you add (BDB).</td>
+</tr>
+<tr>
+<td><code>.cfabric/window</code></td>
+<td>The program&#39;s settings, your notes and your saved workspaces.</td>
+</tr>
+<tr>
+<td><code>.cfabric/logs</code></td>
+<td>The log, <code>cfabric-browser.log</code>, to send along when something goes wrong.</td>
+</tr>
+<tr>
+<td><code>.cfabric/downloads</code>, <code>.cfabric/translations</code></td>
+<td>The downloaded files, kept so that a download need not be repeated. They may be deleted.</td>
+</tr>
+</tbody></table>
+<p>Folders whose name begins with a dot are hidden. On a Mac, press <em>Cmd+Shift+.</em> in the Finder to see them; in the Windows Explorer, choose <em>View → Show → Hidden items</em>.</p>
+<h2 id="updating-and-removing">Updating and removing</h2>
+<p><strong>Updating.</strong> Download the new version and put it where the old one was: on Windows, replace the folder <code>cfabric-browser</code>; on a Mac, replace <code>CACCHT Explorer.app</code> in <em>Applications</em>. The corpora, your settings, notes and workspaces stay where they are, so the new version finds them. Sometimes a new version has to prepare the corpora once more; the release notes say so.</p>
+<p><strong>Removing.</strong> Delete the folder <code>cfabric-browser</code> (Windows, Linux) or <code>CACCHT Explorer.app</code> (Mac). That leaves the data. To remove that too, delete the folder <code>.cfabric</code> in your home folder, and in <code>text-fabric-data/github</code> the folders of the corpora (<code>ETCBC/bhsa</code>, <code>ETCBC/dss</code>, <code>DT-UCPH/sp</code> and <code>Context-Fabric</code>). If you also use Text-Fabric, it uses the same corpora, so keep them.</p>
+
+      <h2>Contents of the guide</h2>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li>Getting started</li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+<nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="index.html"><span>Previous:</span> Guide to CACCHT Explorer</a><a rel="next" href="datasets.html"><span>Next:</span> The datasets</a></nav>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img class="foot__mark" src="../assets/logo.png" alt="CACCHT" width="512" height="512">
+    <div class="foot__t">
+      <p class="foot__name">Creating Annotated Corpora of Classical Hebrew Texts</p>
+      <p class="foot__p foot__contact">Contact: <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a></p>
+      <p class="foot__p">Datasets are published under their own licenses; see each repository and the <a href="../data-use.html">data-use statement</a>. This site is maintained in <a href="https://github.com/CACCHT/caccht.github.io">caccht.github.io</a>.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Elsewhere">
+      <a href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+      <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://context-fabric.ai/">Context-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.github.io/bhsa">BHSA<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.nl">ETCBC<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
