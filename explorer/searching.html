@@ -50,12 +50,170 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will cover search templates and search terms, with examples, and the results, statistics and downloads.</p>
+<p>The Explorer searches with <strong>search templates</strong>, the search language of Text-Fabric. A template describes what you look for, one object per line: a word with certain features, a phrase with a certain function, a clause that contains both. You can write one yourself, have one made from words you click (<em>Search terms</em>), or <a href="asking-claude.html">ask Claude</a> for one.</p>
+<p>In Parallel, <em>Search</em> in the top bar opens the search, which shows each result as a verse in all the texts. Panes have a <em>Search</em> view, and the <a href="concordance.html">Concordance</a> shows results as lines with the hit in the middle. A search goes along when you switch between them.</p>
+<p><a href="images/search.png"><img src="images/search.png" alt="Search in Parallel: the infinitives construct of הלך in the BHSA" loading="lazy"></a></p>
 <h2 id="templates">Templates</h2>
+<p><em>Search</em> opens on <em>Template</em>. Choose the text under <em>Search in</em>, write the template, and click <em>Search</em> (or press <em>Ctrl+Enter</em>).</p>
+<h3 id="one-line-words-with-features">One line: words with features</h3>
+<p>A line is an object type and its features: <code>word</code> and then what the word must be.</p>
+<table>
+<thead>
+<tr>
+<th>You look for</th>
+<th>Template</th>
+<th>In the BHSA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all cases of אלהים</td>
+<td><code>word lex=&gt;LHJM/</code></td>
+<td>2,601</td>
+</tr>
+<tr>
+<td>the verb הלך in all its forms</td>
+<td><code>word lex=HLK[</code></td>
+<td>1,554</td>
+</tr>
+<tr>
+<td>הלך in the qal</td>
+<td><code>word lex=HLK[ vs=qal</code></td>
+<td>1,412</td>
+</tr>
+<tr>
+<td>infinitives construct of הלך</td>
+<td><code>word lex=HLK[ vt=infc</code></td>
+<td>144</td>
+</tr>
+<tr>
+<td>hiphil imperfects</td>
+<td><code>word vs=hif vt=impf</code></td>
+<td>2,264</td>
+</tr>
+<tr>
+<td>nouns in the construct state</td>
+<td><code>word sp=subs st=c</code></td>
+<td>36,679</td>
+</tr>
+<tr>
+<td>Aramaic words</td>
+<td><code>word language=Aramaic</code></td>
+<td>6,106</td>
+</tr>
+</tbody></table>
+<p>The values are the BHSA&#39;s codes, not English words:</p>
+<ul>
+<li><strong>Lexemes</strong> are written in the ETCBC&#39;s transliteration: <code>&gt;</code> א, <code>B</code> ב, <code>G</code> ג, <code>D</code> ד, <code>H</code> ה, <code>W</code> ו, <code>Z</code> ז, <code>X</code> ח, <code>V</code> ט, <code>J</code> י, <code>K</code> כ, <code>L</code> ל, <code>M</code> מ, <code>N</code> נ, <code>S</code> ס, <code>&lt;</code> ע, <code>P</code> פ, <code>Y</code> צ, <code>Q</code> ק, <code>R</code> ר, <code>F</code> שׂ, <code>C</code> שׁ, <code>T</code> ת. A verb ends in <code>[</code> (<code>HLK[</code>), a noun or adjective in <code>/</code> (<code>MLK/</code>), a particle in neither (<code>KJ</code>). <code>=</code> tells homonyms apart: <code>DBR[</code> <em>speak</em>, <code>DBR/</code> <em>word</em>.</li>
+<li><strong>Part of speech</strong> (<code>sp</code>): <code>subs</code> noun, <code>verb</code>, <code>adjv</code> adjective, <code>nmpr</code> proper noun, <code>prep</code> preposition, <code>conj</code> conjunction, <code>art</code> article, <code>nega</code> negation, …</li>
+<li><strong>Stem</strong> (<code>vs</code>): <code>qal</code>, <code>nif</code>, <code>piel</code>, <code>pual</code>, <code>hit</code>, <code>hif</code>, <code>hof</code>, …</li>
+<li><strong>Tense</strong> (<code>vt</code>): <code>perf</code>, <code>impf</code>, <code>wayq</code> wayyiqtol, <code>impv</code>, <code>infc</code>, <code>infa</code>, <code>ptca</code> active participle, <code>ptcp</code> passive participle.</li>
+<li><strong>Person, gender, number, state</strong>: <code>ps=p1|p2|p3</code>, <code>gn=m|f</code>, <code>nu=sg|pl|du</code>, <code>st=a|c</code>.</li>
+</ul>
+<p>You don&#39;t have to know them by heart. While you type, the editor offers the object types and features of the corpus, and after <code>=</code> the values a feature has, with how often each occurs. Hover over a feature for what it means.</p>
+<p><code>|</code> allows several values (<code>ps=p1|p2</code>), <code>#</code> excludes one (<code>prs#absent</code>: with a suffix), and <code>~</code> matches a pattern (<code>nametype~topo</code>).</p>
+<h3 id="indented-lines-inside">Indented lines: inside</h3>
+<p>An indented line lies inside the object above it. That is how you narrow a search to a book or chapter, or ask for words inside a phrase or clause.</p>
+<p><strong>Wayyiqtol forms in Genesis</strong> (2,106 in the BHSA):</p>
+<pre><code>book book=Genesis
+  word vt=wayq
+</code></pre>
+<p><strong>אלהים in Genesis 1</strong> (32 in the BHSA):</p>
+<pre><code>book book=Genesis
+  chapter chapter=1
+    word lex=&gt;LHJM/
+</code></pre>
+<p><strong>Clauses with הָיָה as predicate</strong> (3,521 in the BHSA):</p>
+<pre><code>clause
+  phrase function=Pred
+    word lex=HJH[
+</code></pre>
+<p><strong>Clauses where אלהים is the subject of אמר</strong> (147 in the BHSA):</p>
+<pre><code>clause
+  phrase function=Pred
+    word lex=&gt;MR[
+  phrase function=Subj
+    word lex=&gt;LHJM/
+</code></pre>
+<p>Book names in templates are the BHSA&#39;s, in Latin: <code>Genesis</code>, <code>Exodus</code>, <code>Leviticus</code>, <code>Numeri</code>, <code>Deuteronomium</code>, …, <code>Psalmi</code>, <code>Reges_I</code> (1 Kings). In Parallel, <em>Books</em> under <em>Search terms</em> chooses books without that.</p>
+<p>Phrases have a <code>function</code> (<code>Pred</code> predicate, <code>Subj</code> subject, <code>Objc</code> object, <code>Cmpl</code> complement, <code>Adju</code> adjunct, <code>Time</code>, <code>Loca</code>, …) and a type (<code>typ</code>: <code>VP</code>, <code>NP</code>, <code>PP</code>, …); clauses have a type (<code>typ</code>: <code>Way0</code>, <code>xQtX</code>, <code>NmCl</code>, …), a relation (<code>rela</code>: <code>Objc</code>, <code>Attr</code>, …) and a <code>domain</code> (<code>N</code> narrative, <code>Q</code> direct speech). The word panel shows all features of a word, phrase or clause: click a word, then <em>Lies in</em>.</p>
+<h3 id="order-before-and-after">Order: before and after</h3>
+<p>Objects at the same level come in any order. To fix their order, give them names and relate them on a line of their own: <code>&lt;</code> means <em>before</em>, <code>&lt;:</code> <em>right before</em>.</p>
+<p><strong>Clauses with the subject before the predicate</strong> (5,028 in the BHSA):</p>
+<pre><code>clause
+  p1:phrase function=Subj
+  p2:phrase function=Pred
+p1 &lt; p2
+</code></pre>
+<p><strong>An infinitive construct right after ל</strong> (4,572 in the BHSA):</p>
+<pre><code>phrase
+  w1:word lex=L
+  w2:word vt=infc
+w1 &lt;: w2
+</code></pre>
+<p><strong>A noun followed right away by an adjective</strong> (1,579 in the BHSA):</p>
+<pre><code>phrase typ=NP
+  w1:word sp=subs
+  w2:word sp=adjv
+w1 &lt;: w2
+</code></pre>
+<h3 id="without-and-for-all">Without, and for all</h3>
+<p><code>/without/</code> … <code>/-/</code> finds objects without something inside; <code>/where/</code> … <code>/have/</code> … <code>/-/</code> finds objects all of whose parts have something.</p>
+<p><strong>Verses without a verb</strong> (1,607 in the BHSA):</p>
+<pre><code>verse
+/without/
+  word sp=verb
+/-/
+</code></pre>
+<p><strong>Subjects that are only proper names</strong> (10,484 in the BHSA):</p>
+<pre><code>phrase function=Subj
+/where/
+  word
+/have/
+  word sp=nmpr
+/-/
+</code></pre>
+<h3 id="what-is-counted">What is counted</h3>
+<p>A result is a combination of objects, one for each line of the template. So <code>verse</code> with two words under it gives a result for every pair of such words in a verse, not one per verse: <em>verses with both אלהים and ברא</em> gives 21 results, in 12 verses. Put what you want to count at the top, or alone.</p>
+<h3 id="when-a-template-is-wrong">When a template is wrong</h3>
+<p>The editor checks the template as you type and marks a line it can&#39;t use in red, and a red box under the editor says why (<em>Unknown feature &quot;…&quot;</em>, for instance). Templates that find nothing usually have a value in English (<code>sp=noun</code> instead of <code>subs</code>), a lexeme without its ending (<code>HLK</code> instead of <code>HLK[</code>), or an English book name (<code>Psalms</code> instead of <code>Psalmi</code>).</p>
 <h2 id="search-terms">Search terms</h2>
-<h2 id="examples">Examples</h2>
-<h2 id="results-statistics-and-downloads">Results, statistics and downloads</h2>
-<h2 id="limits-and-stopping">Limits and stopping</h2>
+<p>To search without writing a template, start from words in the text:</p>
+<ol>
+<li>Click a word, and in the word panel <em>Add as search term</em>. The search opens with the word as a term.</li>
+<li>Tick the features that should count, such as its lexeme and stem but not its person.</li>
+<li>Add more terms in the same way, if you like.</li>
+<li><em>All in one</em> chooses whether the terms must be in one verse, clause or phrase; <em>Books</em> limits the search to some books.</li>
+<li>Click <em>Search</em>.</li>
+</ol>
+<p><a href="images/search-terms.png"><img src="images/search-terms.png" alt="A search term made from לֶךְ in Genesis 12:1, with its lexeme and stem ticked" loading="lazy"></a></p>
+<p>The template the terms make is shown under them. Switching to <em>Template</em> puts it in the editor, to change it further. Terms are kept while the program is open, not in links or workspaces.</p>
+<p>In the Reader, the <em>Search</em> tab of the panel and <em>Add as search term</em> open the search in Parallel.</p>
+<h2 id="results">Results</h2>
+<p>While a search runs, the line above the results counts them (<em>Searching… 812 results so far</em>); <em>Stop</em> stops it. When it is done, it says how many results it found and in how long.</p>
+<ul>
+<li><strong>In Parallel</strong>, each result is a verse in all the texts shown, with the hit marked in the searched text, 25 to a page (<em>Previous</em>, <em>Next</em>). Click the reference to read the passage.</li>
+<li><strong>In Panes</strong>, the results are a list; <code>▸</code> before a result shows its structure, with the template&#39;s features.</li>
+</ul>
+<p><em>Recent searches</em> lists your last templates per corpus (in every interface); click one to use it again.</p>
+<h3 id="statistics">Statistics</h3>
+<p><em>Statistics</em>, next to <em>Results</em>, counts the results:</p>
+<ul>
+<li><strong>values of a feature</strong>: <em>Count over</em> chooses the part of the result (the clause, the word, …), <em>Feature</em> the feature; the 25 most frequent values are shown, then the rest together;</li>
+<li><strong>results per book</strong> (or per chapter), in the order of the text; click a bar to read that book or chapter.</li>
+</ul>
+<p>Each chart has <em>Show as table</em>. Write a feature with <code>*</code> and no value in the template (<code>word lex=HLK[ vs*</code>) to count it without limiting the search: it is offered first.</p>
+<p><a href="images/statistics.png"><img src="images/statistics.png" alt="The statistics of a search" loading="lazy"></a></p>
+<h3 id="downloading">Downloading</h3>
+<p><em>Download…</em> saves the results as a spreadsheet: one row per result, with its passage and, for each line of the template, its text and its features. The features in the template are always included; tick more in the list. <em>TSV for Excel</em> is a file that Excel opens with the Hebrew intact; <em>TSV</em> is for other programs.</p>
+<p><em>Cite</em> gives a citation of the search: the corpus and its version, the template, the number of results, and the versions of the Explorer and Context-Fabric.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li>A search stops after 60 seconds: <em>Stopped after 60s with … results. Narrow the template</em>. Most searches take less than a second.</li>
+<li>A search stops at 500,000 results (<em>First … results (stopped at the limit)</em>).</li>
+<li>Two searches run at a time; another waits (<em>Waiting for a free search worker…</em>).</li>
+<li>The program keeps the last 100 searches. An older link runs its search again.</li>
+</ul>
+<p>With <code>cfabric-browser</code> on the command line, <code>--timeout</code>, <code>--max-results</code> and <code>--workers</code> change these limits.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li>Searching</li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
