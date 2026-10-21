@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}</style>
+<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,11 +50,66 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will cover the card shown when you hover over a word, the word panel, the lexicon and the BDB dictionary.</p>
+<p>Every word in the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls carries its lexeme, part of speech and morphology. The Explorer shows them in three places: a card when you hover over a word, the word panel when you click it, and the lexicon.</p>
 <h2 id="hovering-over-a-word">Hovering over a word</h2>
+<p>Hold the mouse still over a word for a moment, and a card shows what matters most about it:</p>
+<p><a href="images/hover.png"><img src="images/hover.png" alt="The card for בָּרָא in Genesis 1:1" loading="lazy"></a></p>
+<ul>
+<li>the gloss, the lexeme and its transliteration;</li>
+<li>the part of speech, and for verbs the stem and tense;</li>
+<li>person, gender, number and state, where they apply; the suffix, if the word has one;</li>
+<li>the language, when it isn&#39;t Hebrew (Aramaic);</li>
+<li>the BDB entry, with its short definition, once <a href="#bdb">BDB</a> has been added;</li>
+<li>with <em>Differences</em> on, what the other texts have here.</li>
+</ul>
+<p>Words in the Dead Sea Scrolls get their gloss and BDB entry from the BHSA, through their lexeme; the card says so (<em>· bhsa</em>).</p>
+<p>The card disappears when you scroll. A translation has no card.</p>
 <h2 id="the-word-panel">The word panel</h2>
+<p>Click a word for the word panel: in Parallel on the left, in Panes, the Interlinear and the Concordance on the right, and in the Reader in the <em>Words</em> tab.</p>
+<p><a href="images/inspector.png"><img src="images/inspector.png" alt="The word panel in Parallel" loading="lazy"></a></p>
+<p>From the top:</p>
+<ul>
+<li>the word, and <em>Read …</em>, to read its passage;</li>
+<li>the same summary as on the card;</li>
+<li><em>Add as search term</em>: a search for words like this one, where you choose which of its features count; see <a href="searching.html">Searching</a> (in Parallel, the Reader and the Concordance);</li>
+<li><em>Lexicon entry</em>, and <em>BDB entry</em> once BDB has been added: the lexeme&#39;s page in the lexicon (BHSA; in the Reader and the Interlinear this switches to Parallel);</li>
+<li><em>All features</em>, folded: every feature of the word with its value. <em>Also the g_ features</em> adds the text in other spellings;</li>
+<li><em>Relations</em>, <em>Lies in</em> and <em>Contains</em>: how the word fits in the corpus&#39; structure (its phrase, clause, verse …). Click one to inspect it.</li>
+</ul>
+<p><em>Close</em>, or <em>Esc</em>, closes the panel.</p>
 <h2 id="the-lexicon">The lexicon</h2>
+<p>The lexicon of the BHSA lists all its lexemes, Hebrew and Aramaic, with every verse each one occurs in. Open it with <em>Lexicon</em> in the top bar of Parallel, the <em>Lexicon</em> view of a pane in Panes, or <em>Lexicon entry</em> in the word panel. In Parallel, <em>← Back to …</em> returns to the chapter.</p>
+<p><a href="images/lexicon.png"><img src="images/lexicon.png" alt="The lexicon: בָּרָא, create, with its occurrences" loading="lazy"></a></p>
+<p><strong>Finding a lexeme.</strong> On the left:</p>
+<ul>
+<li><em>Hebrew</em> and <em>Aramaic</em> choose the language, and the letters choose the first letter;</li>
+<li><em>Find</em> searches all letters at once: by Hebrew (with or without vowels), by transliteration (<code>BR&gt;[</code>), by gloss (<em>create</em>) or, with BDB added, by BDB&#39;s definition;</li>
+<li><em>All parts of speech</em> narrows the list to nouns, verbs, proper nouns, …;</li>
+<li>the order is <em>Alphabetical</em>, <em>Most frequent first</em>, or, with BDB added, <em>By root (BDB)</em>, which lists each lexeme under its root as BDB does.</li>
+</ul>
+<p>Each line gives the lexeme, its gloss, its transliteration and part of speech, BDB&#39;s short definition, and how often it occurs.</p>
+<p><strong>A lexeme&#39;s page.</strong> On the right:</p>
+<ul>
+<li>its part of speech, language, how often it occurs, in how many verses, and its rank by frequency;</li>
+<li><em>In … books</em>: unfold it for how the occurrences are spread over the books; click a book to see only its verses, <em>All books</em> for all again;</li>
+<li><em>Occurrences</em>: every verse, with the word marked; click the reference to read the verse in all the texts;</li>
+<li><em>Search for it</em>: a search for the lexeme, to refine it or see its statistics;</li>
+<li><em>Download (TSV)</em> and <em>Download for Excel</em>: the occurrences as a spreadsheet (of the chosen book only, if you chose one).</li>
+</ul>
 <h2 id="bdb">BDB</h2>
+<p><em>A Hebrew and English Lexicon of the Old Testament</em> by Brown, Driver and Briggs (1906) can be added from the library: <em>Texts → Add a text…</em>, under <em>Dictionaries</em>, <em>Add</em>. See <a href="datasets.html#the-bdb-dictionary">The BDB dictionary</a>.</p>
+<p>A lexeme&#39;s page then has a tab <em>BDB</em> with its entry:</p>
+<p><a href="images/bdb.png"><img src="images/bdb.png" alt="BDB's entry for בָּרָא" loading="lazy"></a></p>
+<ul>
+<li>verse references open the verse; references to other entries show that entry;</li>
+<li>BDB&#39;s abbreviations are explained when you hover over them;</li>
+<li>in long entries, each stem (<em>Qal</em>, <em>Niph.</em>, <em>Pi.</em>, …) is folded: click it to unfold;</li>
+<li><em>Root family</em> lists the other words of the root, with links to their lexemes;</li>
+<li><code>←</code> and <code>→</code> go to the previous and next entry in BDB;</li>
+<li><em>On Sefaria</em> opens the entry on Sefaria&#39;s site.</li>
+</ul>
+<p>Some lexemes are linked to more than one entry: <em>Linked to</em> lists them. Where Sefaria&#39;s text of an entry is incomplete, the page says so and gives the short definition.</p>
+<p>BDB also appears on the hover card, in the word panel, and as the line <em>BDB</em> in the Interlinear.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li>Words</li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>

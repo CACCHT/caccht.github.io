@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}</style>
+<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,12 +50,64 @@
     </header>
 
     <div class="prose">
-<p><em>This chapter is being written.</em> It will cover going to a passage, choosing texts, vocalized or unvocalized text, synchronised reading, the differences between the texts, and reading the scrolls by biblical book.</p>
 <h2 id="going-to-a-passage">Going to a passage</h2>
+<p>In Parallel, the Reader and the Interlinear, the chapter is at the top left (<em>Genesis 1</em>). Click it for the list of books; click a book for its chapters, and a number to open that chapter. <em>Esc</em>, or a click beside the list, closes it.</p>
+<p><a href="images/navigate.png"><img src="images/navigate.png" alt="Choosing a book and chapter" loading="lazy"></a></p>
+<p><code>‹</code> and <code>›</code> next to it go to the previous and next chapter, and so do the arrow keys <code>←</code> and <code>→</code> (not while you are typing in a box).</p>
+<p>In Panes, each pane has its own list on the left: books, then chapters. <em>Previous</em> and <em>Next</em> above the text go through them.</p>
+<p>A passage has its own address (the program keeps everything in it), so a link copied from the address bar opens the same passage, in the same interface, with the same texts. <em>Workspaces</em> saves what you are looking at; see <a href="notes-and-citing.html">Notes, workspaces and citing</a>.</p>
 <h2 id="choosing-texts">Choosing texts</h2>
+<p><em>Texts</em> in the top bar of Parallel (and in the Reader&#39;s <em>Parallels</em> tab) lists the open corpora:</p>
+<ul>
+<li>tick a text to show it, untick it to hide it;</li>
+<li><code>←</code> and <code>→</code> move it to the left or right;</li>
+<li><em>Add a text…</em> opens the library, to open another corpus, download one, or add the <a href="datasets.html#the-jps-1917-translation">JPS 1917</a> or <a href="datasets.html#the-bdb-dictionary">BDB</a>; see <a href="adding-texts.html">Adding texts</a>.</li>
+</ul>
+<p>The first column is the one the others are compared with.</p>
+<p>The rows follow the verses of the BHSA. A text that numbers a verse otherwise is lined up by its counterpart, and a chapter a text doesn&#39;t have shows <em>not in this corpus</em>.</p>
 <h2 id="vocalized-or-unvocalized">Vocalized or unvocalized</h2>
+<p><em>Display → Text</em> chooses how the BHSA is shown:</p>
+<ul>
+<li><em>Vocalized</em>: with vowels and accents; where the Masoretes read a word otherwise than it is written, the qere;</li>
+<li><em>Unvocalized</em>: the consonants as written, the ketiv.</li>
+</ul>
+<p>The Samaritan Pentateuch and the scrolls have one text, without vowels, so the choice applies only to the BHSA.</p>
+<p>The <em>Display</em> menu also has <em>Show object types</em>, <em>Show each corpus&#39; standard features</em>, <em>Hide minor object types</em> and <em>Show node numbers</em>, which change what <em>Structure</em> shows in Panes.</p>
+<h2 id="reading-side-by-side">Reading side by side</h2>
+<p>In Parallel the texts follow each other by themselves: there is one chapter for all columns.</p>
+<p>In Panes, <em>Sync passages</em> does this: when you open a passage in one pane, the others go to the same passage. Where a text numbers the verse otherwise, the pane says which verse it shows instead; where it has no counterpart, it says so.</p>
 <h2 id="differences">Differences</h2>
+<p><em>Differences</em> (in Parallel; <em>Show differences</em> in Panes and in the Reader&#39;s <em>Parallels</em> tab) marks the words where the texts differ from the first column. Above each column it says how many words differ.</p>
+<p><a href="images/differences.png"><img src="images/differences.png" alt="Exodus 20 with differences shown: the SP's long addition after verse 17" loading="lazy"></a></p>
+<p>Two kinds of mark:</p>
+<ul>
+<li><strong>a variant</strong>: a pale red background with a red line under the word;</li>
+<li><strong>spelling</strong> (<em>matres lectionis</em>): a dotted line under the word, where the only difference is a letter for a vowel, such as plene against defective spelling (לא against לוא).</li>
+</ul>
+<p>Hover over a marked word to see what the other text has.</p>
+<p>What counts:</p>
+<ul>
+<li>only the consonants: vowels, accents and other marks don&#39;t count;</li>
+<li>word division doesn&#39;t count: two words written as one are not a difference;</li>
+<li>a word that only one text has is marked in that text;</li>
+<li>in the scrolls, letters reconstructed by the editors never count, and neither does what another text has in their place; lost and illegible letters count only between two letters that are preserved.</li>
+</ul>
+<p><strong>The BHSA, the SP and the scrolls together.</strong> When the first two columns are the BHSA and the Samaritan Pentateuch and the scrolls are shown too, the program also says, for every place where the BHSA and the SP differ, which scrolls side with which. The scrolls&#39; column shows this per verse, with a chip for each scroll: <em>4Q7 = bhsa</em>, <em>4Q7 = sp</em>, or <em>4Q7 other</em>. Scrolls whose text is lost or reconstructed there are left out.</p>
+<p>Only Hebrew texts are compared: a translation is left out.</p>
+<p>In the Interlinear, the text chosen under <em>Under</em> is compared with the main text word by word, and both show the marks.</p>
 <h2 id="the-scrolls-by-biblical-book">The scrolls by biblical book</h2>
+<p>The Dead Sea Scrolls are manuscripts, not books of the Bible, and most scrolls hold only fragments. The Explorer reads them in two ways:</p>
+<ul>
+<li><strong>By biblical book</strong> (Parallel, the Reader, and Panes with <em>Bible books</em>): per verse, the text of every scroll that has it, one line per scroll. In Panes, the list on the left shows only chapters with text in the scrolls, with how many verses and scrolls each has, and the page begins with how many verses have text in the scrolls. Click a scroll&#39;s name to read it at that place.</li>
+<li><strong>By scroll</strong> (Panes, <em>Scrolls</em>): a scroll as it is, by its fragments or columns and lines, including the non-biblical scrolls.</li>
+</ul>
+<p>What the signs mean:</p>
+<ul>
+<li>dimmed letters are reconstructed by the editors;</li>
+<li><code>◦</code> is a letter that can&#39;t be read;</li>
+<li><code>[…]</code> is lost text;</li>
+<li><em>also non-biblical</em> (or <code>*</code> in Parallel) marks a text that the edition also lists among the non-biblical material: its identification is disputed, or the scroll is partly non-biblical.</li>
+</ul>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li>Reading and comparing</li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
