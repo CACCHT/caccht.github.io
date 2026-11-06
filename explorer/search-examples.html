@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search examples — CACCHT Explorer</title>
+<meta name="description" content="CACCHT Explorer, a program for reading, searching and comparing the Hebrew Bible, the Samaritan Pentateuch and the Dead Sea Scrolls: Search examples.">
+<link rel="canonical" href="https://caccht.github.io/explorer/search-examples.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Search examples — CACCHT Explorer">
+<meta property="og:url" content="https://caccht.github.io/explorer/search-examples.html">
+<meta property="og:image" content="https://caccht.github.io/assets/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/favicon.png" sizes="64x64" type="image/png">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../">
+      <img class="brand__mark" src="../assets/logo.png" alt="" width="512" height="512">
+      <span class="brand__name">CACCHT</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="../#corpora">Corpora</a>
+      <a href="../#tools">Tools</a>
+      <a href="../#method">Method</a>
+      <a href="../#publications">Publications</a>
+      <a href="../#team">Team</a>
+      <a class="nav__gh" href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="band band--parch">
+  <div class="wrap">
+    <header class="shead shead--dark">
+      <p class="label">CACCHT Explorer · Guide</p>
+      <h1 class="shead__h">Search examples</h1>
+    </header>
+
+    <div class="prose">
+<p>Fifty search templates for the BHSA, from a single word to whole clauses, each with the number of results it finds. They go from words (1–18) to phrases (19–34) and clauses (35–50); <a href="searching.html#templates">Searching</a> explains how templates work, and the <a href="#summary">summary</a> below sums up what the examples use.</p>
+<p>To try one, open the BHSA, choose <em>Search</em> and <em>Template</em>, paste the template and click <em>Search</em>. Lines that start with <code>%</code> are comments. Change a value and search again to see what else is there; <em>Statistics</em> and the <a href="concordance.html">Concordance</a> show the results in other ways.</p>
+<p>The numbers are those of the BHSA, version 2021, checked with both cores of Context-Fabric (Python and Rust). A result is one way to match the whole template, so a template with a clause and a phrase in it gives a result for every such pair (<a href="searching.html#what-is-counted">What is counted</a>).</p>
+<h2 id="summary">Summary</h2>
+<p><strong>Conditions</strong> on an object&#39;s line, all of which must hold:</p>
+<table>
+<thead>
+<tr>
+<th>Written</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>sp=verb</code></td>
+<td>the feature has this value</td>
+</tr>
+<tr>
+<td><code>vt=wayq|impf</code></td>
+<td>one of these values</td>
+</tr>
+<tr>
+<td><code>sp#verb</code></td>
+<td>not this value</td>
+</tr>
+<tr>
+<td><code>lex~^&gt;L</code></td>
+<td>matches a regular expression</td>
+</tr>
+<tr>
+<td><code>freq_lex&gt;1000</code></td>
+<td>more than (also <code>&lt;</code>)</td>
+</tr>
+<tr>
+<td><code>qere</code></td>
+<td>the feature has a value, whatever it is</td>
+</tr>
+</tbody></table>
+<p><strong>Relations</strong> between two named objects (<code>w1:word</code>), on a line of their own (<code>w1 &lt; w2</code>), or at the start of a line, relating that object to the one on the line above:</p>
+<table>
+<thead>
+<tr>
+<th>Written</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;</code>, <code>&gt;</code></td>
+<td>before, after (anywhere)</td>
+</tr>
+<tr>
+<td><code>&lt;:</code>, <code>:&gt;</code></td>
+<td>right before, right after</td>
+</tr>
+<tr>
+<td><code>=:</code></td>
+<td>starts at the same word</td>
+</tr>
+<tr>
+<td><code>:=</code></td>
+<td>ends at the same word</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>consists of the same words</td>
+</tr>
+<tr>
+<td><code>[[</code>, <code>]]</code></td>
+<td>contains, lies in</td>
+</tr>
+<tr>
+<td><code>-mother&gt;</code></td>
+<td>has the other as its mother (an edge)</td>
+</tr>
+<tr>
+<td><code>.lex.</code></td>
+<td>has the same value of a feature; <code>.nu#nu.</code>: different values</td>
+</tr>
+</tbody></table>
+<p><strong>Quantifiers</strong>, each ending with <code>/-/</code>, directly under the object they belong to, at its indentation:</p>
+<table>
+<thead>
+<tr>
+<th>Written</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/without/</code> … <code>/-/</code></td>
+<td>the object doesn&#39;t contain …</td>
+</tr>
+<tr>
+<td><code>/where/</code> A <code>/have/</code> B <code>/-/</code></td>
+<td>every A in the object is also B</td>
+</tr>
+<tr>
+<td><code>/with/</code> A <code>/or/</code> B <code>/-/</code></td>
+<td>the object contains A or B</td>
+</tr>
+</tbody></table>
+<h2 id="words">Words</h2>
+<h3 id="1-every-verb">1. Every verb</h3>
+<p>The simplest query: every word whose part of speech is &quot;verb&quot;.</p>
+<pre><code>word sp=verb
+</code></pre>
+<p>73,710 results in the BHSA.</p>
+<h3 id="2-one-lexeme-brgt-create">2. One lexeme: BR&gt;[ “create”</h3>
+<p>All occurrences of the lexeme BR&gt;[ (&quot;to create&quot;). In BHSA lexemes are written in ETCBC transliteration; the &quot;[&quot; marks a verb, &quot;/&quot; a noun.</p>
+<pre><code>word lex=BR&gt;[
+</code></pre>
+<p>48 results in the BHSA.</p>
+<h3 id="3-several-features-and">3. Several features: AND</h3>
+<p>Two conditions on one line are combined with AND: verbs in the Hifil stem that are also in the wayyiqtol form.</p>
+<pre><code>word sp=verb vs=hif vt=wayq
+</code></pre>
+<p>1,752 results in the BHSA.</p>
+<h3 id="4-one-of-several-values-or">4. One of several values: OR</h3>
+<p>The pipe | means OR within one feature: every word that is either an imperative OR an infinitive construct.</p>
+<pre><code>word vt=impv|infc
+</code></pre>
+<p>10,913 results in the BHSA.</p>
+<h3 id="5-not-this-value">5. Not this value</h3>
+<p>Negation of a value with #: every word that is NOT Hebrew, i.e. the Aramaic words (Daniel, Ezra, Jer 10:11, Gen 31:47).</p>
+<pre><code>word language#Hebrew
+</code></pre>
+<p>6,106 results in the BHSA.</p>
+<h3 id="6-person-gender-and-number">6. Person, gender and number</h3>
+<p>Person, gender and number together: 2nd person feminine singular verbs.</p>
+<pre><code>word sp=verb ps=p2 gn=f nu=sg
+</code></pre>
+<p>778 results in the BHSA.</p>
+<h3 id="7-dual-nouns-in-the-construct-state">7. Dual nouns in the construct state</h3>
+<p>Nouns in the construct state that are dual.</p>
+<pre><code>word sp=subs st=c nu=du
+</code></pre>
+<p>809 results in the BHSA.</p>
+<h3 id="8-verbs-with-a-suffix-me">8. Verbs with a suffix “me”</h3>
+<p>Verbs that carry a pronominal suffix of the 1st person singular (&quot;me&quot;, &quot;my&quot;). prs_ps / prs_nu / prs_gn describe the suffix.</p>
+<pre><code>word sp=verb prs_ps=p1 prs_nu=sg
+</code></pre>
+<p>1,372 results in the BHSA.</p>
+<h3 id="9-a-regular-expression-on-the-lexeme">9. A regular expression on the lexeme</h3>
+<p>Regular expressions with ~ : all lexemes that start with the letter aleph (&quot;&gt;&quot; in ETCBC transliteration).</p>
+<pre><code>word lex~^&gt;
+</code></pre>
+<p>62,568 results in the BHSA.</p>
+<h3 id="10-lexemes-by-their-gloss">10. Lexemes by their gloss</h3>
+<p>Regular expression on the gloss (English translation of the lexeme). In BHSA the gloss lives on the &quot;lex&quot; node type (one node per lexeme, linked to all its occurrences), so we look for lexemes whose gloss contains &quot;king&quot; and then for the words inside those lexemes.</p>
+<pre><code>lex gloss~king
+  word
+</code></pre>
+<p>3,529 results in the BHSA.</p>
+<h3 id="11-hapax-legomena">11. Hapax legomena</h3>
+<p>Numeric comparison: rare words. freq_lex is the number of times the lexeme occurs in the whole Bible; here: occurs exactly once (hapax).</p>
+<pre><code>word freq_lex=1
+</code></pre>
+<p>3,071 results in the BHSA.</p>
+<h3 id="12-frequent-nouns">12. Frequent nouns</h3>
+<p>Numeric comparison with &gt; : very frequent nouns (more than 1000 times).</p>
+<pre><code>word sp=subs freq_lex&gt;1000
+</code></pre>
+<p>33,889 results in the BHSA.</p>
+<h3 id="13-the-he-locale">13. The he locale</h3>
+<p>Proper nouns with the &quot;he locale&quot; ending (uvf = univalent final), the directional -ah as in MYRJMH &quot;to Egypt&quot;.</p>
+<pre><code>word sp=nmpr uvf=H
+</code></pre>
+<p>280 results in the BHSA.</p>
+<h3 id="14-inside-a-book">14. Inside a book</h3>
+<p>Embedding in a section: all words of the lexeme &gt;LHJM/ (&quot;God&quot;) in the book of Genesis. Indentation means: the word lies inside the book.</p>
+<pre><code>book book=Genesis
+  word lex=&gt;LHJM/
+</code></pre>
+<p>219 results in the BHSA.</p>
+<h3 id="15-two-adjacent-words">15. Two adjacent words</h3>
+<p>Two words in sequence. &lt;: means &quot;immediately followed by&quot;: the article directly followed by an adjective.</p>
+<pre><code>word sp=art
+&lt;: word sp=adjv
+</code></pre>
+<p>3,282 results in the BHSA.</p>
+<h3 id="16-named-words-in-one-verse">16. Named words in one verse</h3>
+<p>Naming nodes and using a relation later. Within one verse, the lexeme &gt;MR[ (&quot;say&quot;) comes somewhere before the lexeme DBR[ (&quot;speak&quot;).</p>
+<pre><code>verse
+  w1:word lex=&gt;MR[
+  w2:word lex=DBR[
+w1 &lt; w2
+</code></pre>
+<p>293 results in the BHSA.</p>
+<h3 id="17-the-same-lexeme-twice-in-a-row">17. The same lexeme twice in a row</h3>
+<p>Comparing features of two nodes with .f. : two adjacent words in the same verse that have the same lexeme (repetitions like &quot;holy, holy&quot;).</p>
+<pre><code>verse
+  w1:word
+  w2:word
+w1 &lt;: w2
+w1 .lex. w2
+</code></pre>
+<p>1,472 results in the BHSA.</p>
+<h3 id="18-three-words-in-a-row-and-he-said-preposition">18. Three words in a row: “and he said” + preposition</h3>
+<p>Three adjacent words: the classic sequence &quot;and he said&quot; WJ&gt;MR (conjunction + wayyiqtol of &gt;MR[) followed by a preposition.</p>
+<pre><code>word lex=W
+&lt;: word lex=&gt;MR[ vt=wayq
+&lt;: word sp=prep
+</code></pre>
+<p>819 results in the BHSA.</p>
+<h2 id="phrases">Phrases</h2>
+<h3 id="19-subject-phrases">19. Subject phrases</h3>
+<p>All phrases that function as the subject of their clause.</p>
+<pre><code>phrase function=Subj
+</code></pre>
+<p>31,979 results in the BHSA.</p>
+<h3 id="20-prepositional-phrases">20. Prepositional phrases</h3>
+<p>Phrase type instead of function: all prepositional phrases.</p>
+<pre><code>phrase typ=PP
+</code></pre>
+<p>57,483 results in the BHSA.</p>
+<h3 id="21-objects-with-the-object-marker">21. Objects with the object marker</h3>
+<p>A phrase with a word inside it: object phrases that contain the object marker &gt;T (&quot;et&quot;).</p>
+<pre><code>phrase function=Objc
+  word lex=&gt;T
+</code></pre>
+<p>10,636 results in the BHSA.</p>
+<h3 id="22-objects-without-the-object-marker">22. Objects without the object marker</h3>
+<p>Object phrases WITHOUT the object marker, using the /without/ quantifier.</p>
+<pre><code>phrase function=Objc
+/without/
+  word lex=&gt;T
+/-/
+</code></pre>
+<p>13,640 results in the BHSA.</p>
+<h3 id="23-time-phrases-with-day">23. Time phrases with “day”</h3>
+<p>Time phrases (function=Time) that contain the noun JWM/ (&quot;day&quot;).</p>
+<pre><code>phrase function=Time
+  word lex=JWM/
+</code></pre>
+<p>1,678 results in the BHSA.</p>
+<h3 id="24-locatives-with-a-proper-noun">24. Locatives with a proper noun</h3>
+<p>Location phrases that contain a proper noun.</p>
+<pre><code>phrase function=Loca
+  word sp=nmpr
+</code></pre>
+<p>990 results in the BHSA.</p>
+<h3 id="25-the-first-word-of-a-phrase">25. The first word of a phrase</h3>
+<p>A phrase whose FIRST word is a preposition. =: means &quot;starts at the same slot&quot;, so the word is at the very beginning of the phrase.</p>
+<pre><code>p:phrase typ=PP
+  w:word sp=prep
+p =: w
+</code></pre>
+<p>55,734 results in the BHSA.</p>
+<h3 id="26-the-last-word-of-a-phrase">26. The last word of a phrase</h3>
+<p>A phrase whose LAST word is a noun with a pronominal suffix of the third person. := means “ends at the same slot”.</p>
+<pre><code>p:phrase function=Subj
+  w:word sp=subs prs_ps=p3
+p := w
+</code></pre>
+<p>2,717 results in the BHSA.</p>
+<h3 id="27-one-word-phrases">27. One-word phrases</h3>
+<p>Single-word phrases: the phrase occupies exactly the same slots as one word (==). Here: subject phrases consisting of only a personal pronoun.</p>
+<pre><code>p:phrase function=Subj
+  w:word sp=prps
+p == w
+</code></pre>
+<p>3,766 results in the BHSA.</p>
+<h3 id="28-nifal-predicates">28. Nifal predicates</h3>
+<p>Predicate phrases that contain a verb in the Nifal stem.</p>
+<pre><code>phrase function=Pred
+  word sp=verb vs=nif
+</code></pre>
+<p>3,250 results in the BHSA.</p>
+<h3 id="29-predicates-with-an-object-suffix">29. Predicates with an object suffix</h3>
+<p>Predicate with object suffix (function=PreO), e.g. &quot;he saw him&quot;.</p>
+<pre><code>phrase function=PreO
+  word vt=wayq
+</code></pre>
+<p>1,028 results in the BHSA.</p>
+<h3 id="30-determined-subjects">30. Determined subjects</h3>
+<p>Determined noun phrases (det=det) that are subjects.</p>
+<pre><code>phrase typ=NP function=Subj det=det
+</code></pre>
+<p>11,797 results in the BHSA.</p>
+<h3 id="31-negation-followed-by-a-predicate">31. Negation followed by a predicate</h3>
+<p>Two phrases in a row: a negation phrase immediately followed by a predicate phrase (&quot;not + verb&quot;).</p>
+<pre><code>phrase function=Nega
+&lt;: phrase function=Pred
+</code></pre>
+<p>4,832 results in the BHSA.</p>
+<h3 id="32-addressing-yhwh">32. Addressing YHWH</h3>
+<p>Vocative phrases (direct address) that contain the name of God YHWH.</p>
+<pre><code>phrase function=Voct
+  word lex=JHWH/
+</code></pre>
+<p>390 results in the BHSA.</p>
+<h3 id="33-either-of-two-prepositions">33. Either of two prepositions</h3>
+<p>/with/ ... /or/: complement phrases that contain either the preposition &gt;L (&quot;to&quot;) or the preposition L (&quot;to/for&quot;).</p>
+<pre><code>phrase function=Cmpl
+/with/
+  word lex=&gt;L
+/or/
+  word lex=L
+/-/
+</code></pre>
+<p>13,377 results in the BHSA.</p>
+<h3 id="34-every-noun-plural">34. Every noun plural</h3>
+<p>&quot;Every&quot; via /without/: noun phrases in which EVERY noun is plural. Trick: &quot;every noun is plural&quot; = &quot;there is no noun that is not plural&quot;.</p>
+<pre><code>phrase typ=NP
+/without/
+  word sp=subs nu#pl
+/-/
+</code></pre>
+<p>9,436 results in the BHSA.</p>
+<h2 id="clauses">Clauses</h2>
+<h3 id="35-nominal-clauses">35. Nominal clauses</h3>
+<p>Nominal clauses: clauses without a finite verb (clause type NmCl).</p>
+<pre><code>clause typ=NmCl
+</code></pre>
+<p>11,377 results in the BHSA.</p>
+<h3 id="36-wayyiqtol-clauses-without-an-explicit-subject">36. Wayyiqtol clauses without an explicit subject</h3>
+<p>Wayyiqtol clauses without an explicit subject (Way0; WayX has one), in narrative (domain=N).</p>
+<pre><code>clause typ=Way0 domain=N
+</code></pre>
+<p>9,027 results in the BHSA.</p>
+<h3 id="37-subject-before-predicate">37. Subject before predicate</h3>
+<p>Word order within a clause: Subject before Predicate. Phrases indented under the clause lie inside it; &lt; gives the order.</p>
+<pre><code>clause
+  s:phrase function=Subj
+  p:phrase function=Pred
+s &lt; p
+</code></pre>
+<p>5,028 results in the BHSA.</p>
+<h3 id="38-verb-subject-object">38. Verb – subject – object</h3>
+<p>The &quot;classic&quot; verb-subject-object order (V-S-O). Each line that starts with &lt; relates the node on that line to the node on the line above it.</p>
+<pre><code>clause
+  phrase function=Pred
+  &lt; phrase function=Subj
+  &lt; phrase function=Objc
+</code></pre>
+<p>2,211 results in the BHSA.</p>
+<h3 id="39-the-object-first">39. The object first</h3>
+<p>Fronted object: the object is the very first phrase of the clause (=: = starts at the same slot as the clause).</p>
+<pre><code>c:clause
+  o:phrase function=Objc
+  phrase function=Pred
+c =: o
+</code></pre>
+<p>1,141 results in the BHSA.</p>
+<h3 id="40-clauses-without-a-predicate">40. Clauses without a predicate</h3>
+<p>Clauses WITHOUT any predicate phrase (no Pred, PreO, PreS or PreC).</p>
+<pre><code>clause
+/without/
+  phrase function=Pred|PreO|PreS|PreC
+/-/
+</code></pre>
+<p>7,641 results in the BHSA.</p>
+<h3 id="41-relative-clauses-with">41. Relative clauses with אשׁר</h3>
+<p>Relative clauses: clauses that are attributive (rela=Attr) and start with the relative particle &gt;CR (&quot;asher&quot;).</p>
+<pre><code>c:clause rela=Attr
+  w:word lex=&gt;CR
+c =: w
+</code></pre>
+<p>3,765 results in the BHSA.</p>
+<h3 id="42-object-clauses-with">42. Object clauses with כי</h3>
+<p>Object clauses (a whole clause functions as object of another clause), e.g. &quot;he saw THAT it was good&quot;.</p>
+<pre><code>clause rela=Objc
+  word lex=KJ
+</code></pre>
+<p>540 results in the BHSA.</p>
+<h3 id="43-imperatives-in-direct-speech">43. Imperatives in direct speech</h3>
+<p>Clauses inside direct speech (domain=Q) that contain an imperative.</p>
+<pre><code>clause domain=Q
+  word vt=impv
+</code></pre>
+<p>4,301 results in the BHSA.</p>
+<h3 id="44-participle-clauses-in-the-psalms">44. Participle clauses in the Psalms</h3>
+<p>Participle clauses (typ=Ptcp) in the book of Psalms.</p>
+<pre><code>book book=Psalmi
+  clause typ=Ptcp
+</code></pre>
+<p>430 results in the BHSA.</p>
+<h3 id="45-a-clause-and-its-mother">45. A clause and its mother</h3>
+<p>Using an edge feature: a clause and its mother clause. -mother&gt; follows the &quot;mother&quot; edge from the daughter to the mother. Here: infinitive construct clauses whose mother is a wayyiqtol clause.</p>
+<pre><code>c1:clause typ=InfC
+c2:clause typ=Way0|WayX
+c1 -mother&gt; c2
+</code></pre>
+<p>1,494 results in the BHSA.</p>
+<h3 id="46-saying-then-speech">46. Saying, then speech</h3>
+<p>Two clauses in a row: a clause with the lexeme &gt;MR[ (&quot;say&quot;) immediately followed by a clause in the quotation domain (the start of speech).</p>
+<pre><code>c1:clause
+  word lex=&gt;MR[
+c2:clause domain=Q
+c1 &lt;: c2
+</code></pre>
+<p>5,070 results in the BHSA.</p>
+<h3 id="47-three-levels-at-once">47. Three levels at once</h3>
+<p>Combining all three levels: a clause that contains a subject phrase containing a proper noun, and a predicate phrase with a qal perfect verb.</p>
+<pre><code>clause
+  phrase function=Subj
+    word sp=nmpr
+  phrase function=Pred
+    word vs=qal vt=perf
+</code></pre>
+<p>2,533 results in the BHSA.</p>
+<h3 id="48-disagreement-in-number">48. Disagreement in number</h3>
+<p>Agreement with feature comparison: within one clause, a verb in the predicate and a noun in the subject differ in number (.nu#nu. means “nu of the left node is not equal to nu of the right node”). Useful for collective nouns.</p>
+<pre><code>clause
+  phrase function=Pred
+    v:word sp=verb nu=sg|pl
+  phrase function=Subj
+    s:word sp=subs nu=sg|pl
+v .nu#nu. s
+</code></pre>
+<p>3,317 results in the BHSA.</p>
+<h3 id="49-clause-order-in-a-sentence-genesis-111">49. Clause order in a sentence, Genesis 1–11</h3>
+<p>Sentence level + clause level: sentences that consist of at least two clauses where a wayyiqtol clause is followed (not necessarily directly) by a nominal clause, in Genesis 1-11.</p>
+<pre><code>book book=Genesis
+  chapter chapter&lt;12
+    sentence
+      clause typ=Way0|WayX
+      &lt; clause typ=NmCl
+</code></pre>
+<p>9 results in the BHSA.</p>
+<h3 id="50-putting-it-together">50. Putting it together</h3>
+<p>A showcase that uses almost everything: in Genesis, a verbal clause (kind=VC) in narrative that starts with the conjunction, directly followed by a wayyiqtol predicate, has a subject containing a proper name, and has NO object phrase. The /without/ block sits directly under the clause line, at the clause’s indentation, so it belongs to clause c; the phrase lines after it are ordinary children of c. In the BHSA the wa- of a wayyiqtol is a phrase of its own (function=Conj), so such a clause never starts with its predicate.</p>
+<pre><code>book book=Genesis
+  c:clause kind=VC domain=N
+  /without/
+    phrase function=Objc
+  /-/
+    j:phrase function=Conj
+    p:phrase function=Pred
+      word vt=wayq
+    phrase function=Subj
+      word sp=nmpr
+c =: j
+j &lt;: p
+</code></pre>
+<p>454 results in the BHSA.</p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Lexemes are in the ETCBC&#39;s transliteration (<a href="searching.html#one-line-words-with-features">Searching</a> has the letters). A verb ends in <code>[</code>, a noun in <code>/</code>, and <code>=</code> tells apart lexemes written alike: <code>&gt;L</code> is the preposition &quot;to&quot;, <code>&gt;L=</code> the negation &quot;not&quot;. Not sure how a lexeme is written? Look it up in the <a href="words.html#the-lexicon">lexicon</a>, or use a regular expression (<code>word lex~^MLK</code>).</li>
+<li>The gloss is a feature of <code>lex</code> objects (one per lexeme, with its occurrences inside), not of words; see example 10.</li>
+<li>The <code>domain</code> of a clause is <code>N</code> (narrative), <code>Q</code> (quotation, direct speech) or <code>D</code> (discourse).</li>
+<li>A quantifier goes directly under the object it belongs to, at the same indentation; see example 50.</li>
+<li>If a template finds nothing, <a href="searching.html#when-a-template-is-wrong">When a template is wrong</a> lists the usual causes.</li>
+</ul>
+
+      <h2>Contents of the guide</h2>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li>Search examples</li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+<nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="searching.html"><span>Previous:</span> Searching</a><a rel="next" href="concordance.html"><span>Next:</span> The Concordance</a></nav>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img class="foot__mark" src="../assets/logo.png" alt="CACCHT" width="512" height="512">
+    <div class="foot__t">
+      <p class="foot__name">Creating Annotated Corpora of Classical Hebrew Texts</p>
+      <p class="foot__p foot__contact">Contact: <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a></p>
+      <p class="foot__p">Datasets are published under their own licenses; see each repository and the <a href="../data-use.html">data-use statement</a>. This site is maintained in <a href="https://github.com/CACCHT/caccht.github.io">caccht.github.io</a>.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Elsewhere">
+      <a href="https://github.com/CACCHT">GitHub<span aria-hidden="true"> ↗</span></a>
+      <a href="https://annotation.github.io/text-fabric/tf/">Text-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://context-fabric.ai/">Context-Fabric<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.github.io/bhsa">BHSA<span aria-hidden="true"> ↗</span></a>
+      <a href="https://etcbc.nl">ETCBC<span aria-hidden="true"> ↗</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
