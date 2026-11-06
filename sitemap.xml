@@ -13,6 +13,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://caccht.github.io/search-examples.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://caccht.github.io/explorer/</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
