@@ -85,6 +85,13 @@
 <p><strong>Windows.</strong> Unpack the zip, open the folder <code>cfabric-browser</code> and double-click <code>cfabric-browser.exe</code>. If Windows says <em>Windows protected your PC</em>, click <em>More info</em> and then <em>Run anyway</em>. Keep the folder together: the program needs the <code>_internal</code> folder next to it. If the window doesn&#39;t open, right-click the downloaded zip before unpacking it, choose <em>Properties</em>, tick <em>Unblock</em>, and unpack it again.</p>
 <p><strong>macOS.</strong> Unpack the zip and move <code>CACCHT Explorer.app</code> to <em>Applications</em>. The first time, right-click it, choose <em>Open</em>, and then <em>Open</em> again. If macOS only offers to move it to the bin, go to <em>System Settings → Privacy &amp; Security</em> and click <em>Open Anyway</em>.</p>
 <p><strong>Linux.</strong> Unpack it (<code>tar -xzf CACCHT-Explorer-linux.tar.gz</code>) and start <code>cfabric-browser/cfabric-browser</code>. The window needs GTK with WebKit2GTK, or Qt with WebEngine. Without them, the program opens your web browser instead, which works just as well.</p>
+<h2 id="with-python-pip">With Python (pip)</h2>
+<p>If you work with Python, you can install the Explorer with pip instead. It needs Python 3.13 or newer:</p>
+<pre><code>pip install &quot;cfabric-browser[window]&quot;
+caccht-explorer
+</code></pre>
+<p>This opens the Explorer in your web browser, at <code>http://localhost:8107/</code>; <code>caccht-explorer --window</code> gives it a window of its own, as the program from GitHub has. It stops when you press <em>Ctrl+C</em> in the terminal. Without <code>[window]</code> it always uses your web browser. <code>caccht-explorer --help</code> lists the options.</p>
+<p>The corpora are downloaded from the Explorer&#39;s library, under <em>Can be downloaded</em>, or beforehand in the terminal with <code>caccht-explorer download bhsa sp dss</code>. For faster searching, also install the new Context-Fabric core, still a test version: <code>pip install --pre &quot;context-fabric==0.6.0rc1&quot;</code>.</p>
 <h2 id="the-first-start">The first start</h2>
 <p>If the texts are not on your computer yet, the program shows <em>Getting the corpora</em>, with the three it offers:</p>
 <table>
@@ -134,11 +141,11 @@
 </tr>
 <tr>
 <td><code>.cfabric/window</code></td>
-<td>The program&#39;s settings, your notes and your saved workspaces.</td>
+<td>The program&#39;s settings, your notes and your saved workspaces. Installed with pip and used in a web browser, the web browser keeps these.</td>
 </tr>
 <tr>
 <td><code>.cfabric/logs</code></td>
-<td>The log, <code>cfabric-browser.log</code>, to send along when something goes wrong.</td>
+<td>The log, <code>cfabric-browser.log</code>, to send along when something goes wrong. Installed with pip, the messages are in the terminal instead.</td>
 </tr>
 <tr>
 <td><code>.cfabric/downloads</code>, <code>.cfabric/translations</code></td>
@@ -147,8 +154,8 @@
 </tbody></table>
 <p>Folders whose name begins with a dot are hidden. On a Mac, press <em>Cmd+Shift+.</em> in the Finder to see them; in the Windows Explorer, choose <em>View → Show → Hidden items</em>.</p>
 <h2 id="updating-and-removing">Updating and removing</h2>
-<p><strong>Updating.</strong> Download the new version and put it where the old one was: on Windows, replace the folder <code>cfabric-browser</code>; on a Mac, replace <code>CACCHT Explorer.app</code> in <em>Applications</em>. The corpora, your settings, notes and workspaces stay where they are, so the new version finds them. Sometimes a new version has to prepare the corpora once more; the release notes say so.</p>
-<p><strong>Removing.</strong> Delete the folder <code>cfabric-browser</code> (Windows, Linux) or <code>CACCHT Explorer.app</code> (Mac). That leaves the data. To remove that too, delete the folder <code>.cfabric</code> in your home folder, and in <code>text-fabric-data/github</code> the folders of the corpora (<code>ETCBC/bhsa</code>, <code>ETCBC/dss</code>, <code>DT-UCPH/sp</code> and <code>Context-Fabric</code>). If you also use Text-Fabric, it uses the same corpora, so keep them.</p>
+<p><strong>Updating.</strong> Download the new version and put it where the old one was: on Windows, replace the folder <code>cfabric-browser</code>; on a Mac, replace <code>CACCHT Explorer.app</code> in <em>Applications</em>. The corpora, your settings, notes and workspaces stay where they are, so the new version finds them. Sometimes a new version has to prepare the corpora once more; the release notes say so. Installed with pip, update with <code>pip install -U cfabric-browser</code>.</p>
+<p><strong>Removing.</strong> Delete the folder <code>cfabric-browser</code> (Windows, Linux) or <code>CACCHT Explorer.app</code> (Mac). That leaves the data. To remove that too, delete the folder <code>.cfabric</code> in your home folder, and in <code>text-fabric-data/github</code> the folders of the corpora (<code>ETCBC/bhsa</code>, <code>ETCBC/dss</code>, <code>DT-UCPH/sp</code> and <code>Context-Fabric</code>). If you also use Text-Fabric, it uses the same corpora, so keep them. Installed with pip, remove the Explorer with <code>pip uninstall cfabric-browser</code>.</p>
 
       <h2>Contents of the guide</h2>
       <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li>Getting started</li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
