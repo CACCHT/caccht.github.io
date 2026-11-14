@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://caccht.github.io/sitemap.xml
