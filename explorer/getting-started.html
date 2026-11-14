@@ -16,9 +16,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Hebrew:wght@400;600&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,14 +41,20 @@
 
 <main id="main">
 
-<section class="band band--parch">
-  <div class="wrap">
-    <header class="shead shead--dark">
-      <p class="label">CACCHT Explorer · Guide</p>
-      <h1 class="shead__h">Getting started</h1>
-    </header>
+<section class="band">
+  <div class="wrap doc">
+    <nav class="toc" aria-label="Contents of the guide">
+      <p class="toc__h">CACCHT Explorer guide</p>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><span class="is-here" aria-current="page">Getting started</span></li><li class="sub"><a href="#download">Download</a></li><li class="sub"><a href="#starting-the-program">Starting the program</a></li><li class="sub"><a href="#with-python-pip">With Python (pip)</a></li><li class="sub"><a href="#the-first-start">The first start</a></li><li class="sub"><a href="#where-the-data-is-kept">Where the data is kept</a></li><li class="sub"><a href="#updating-and-removing">Updating and removing</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+    </nav>
 
-    <div class="prose">
+    <div class="doc__main">
+      <header class="shead">
+        <p class="label"><a href="index.html">CACCHT Explorer guide</a></p>
+        <h1 class="shead__h">Getting started</h1>
+      </header>
+
+      <div class="prose">
 <p>CACCHT Explorer is a program for reading, searching and comparing the Hebrew Bible (the BHSA), the Samaritan Pentateuch and the Dead Sea Scrolls, side by side. It runs on your own computer, needs no internet connection once the texts are there, and you don&#39;t need to install Python or anything else for it. It reads the same data as <a href="https://annotation.github.io/text-fabric/" rel="noopener">Text-Fabric</a>, through Context-Fabric, the engine underneath.</p>
 <p>The Explorer is new, and still growing. Please report what goes wrong, and what you would like to see, in an <a href="https://github.com/Context-Fabric/context-fabric/issues" rel="noopener">issue</a> or by email to <a href="mailto:martijn.naaijer@uzh.ch">martijn.naaijer@uzh.ch</a>.</p>
 <h2 id="download">Download</h2>
@@ -156,10 +161,8 @@ caccht-explorer
 <h2 id="updating-and-removing">Updating and removing</h2>
 <p><strong>Updating.</strong> Download the new version and put it where the old one was: on Windows, replace the folder <code>cfabric-browser</code>; on a Mac, replace <code>CACCHT Explorer.app</code> in <em>Applications</em>. The corpora, your settings, notes and workspaces stay where they are, so the new version finds them. Sometimes a new version has to prepare the corpora once more; the release notes say so. Installed with pip, update with <code>pip install -U cfabric-browser</code>.</p>
 <p><strong>Removing.</strong> Delete the folder <code>cfabric-browser</code> (Windows, Linux) or <code>CACCHT Explorer.app</code> (Mac). That leaves the data. To remove that too, delete the folder <code>.cfabric</code> in your home folder, and in <code>text-fabric-data/github</code> the folders of the corpora (<code>ETCBC/bhsa</code>, <code>ETCBC/dss</code>, <code>DT-UCPH/sp</code> and <code>Context-Fabric</code>). If you also use Text-Fabric, it uses the same corpora, so keep them. Installed with pip, remove the Explorer with <code>pip uninstall cfabric-browser</code>.</p>
-
-      <h2>Contents of the guide</h2>
-      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li>Getting started</li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
 <nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="index.html"><span>Previous:</span> Guide to CACCHT Explorer</a><a rel="next" href="datasets.html"><span>Next:</span> The datasets</a></nav>
+      </div>
     </div>
   </div>
 </section>
@@ -184,7 +187,5 @@ caccht-explorer
     </nav>
   </div>
 </footer>
-
-<script src="../assets/js/site.js" defer></script>
 </body>
 </html>

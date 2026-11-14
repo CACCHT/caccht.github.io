@@ -16,9 +16,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Hebrew:wght@400;600&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,16 +41,22 @@
 
 <main id="main">
 
-<section class="band band--parch">
-  <div class="wrap">
-    <header class="shead shead--dark">
-      <p class="label">CACCHT Explorer · Guide</p>
-      <h1 class="shead__h">Adding texts</h1>
-    </header>
+<section class="band">
+  <div class="wrap doc">
+    <nav class="toc" aria-label="Contents of the guide">
+      <p class="toc__h">CACCHT Explorer guide</p>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><span class="is-here" aria-current="page">Adding texts</span></li><li class="sub"><a href="#corpora-on-your-computer">Corpora on your computer</a></li><li class="sub"><a href="#corpora-that-can-be-downloaded">Corpora that can be downloaded</a></li><li class="sub"><a href="#translations">Translations</a></li><li class="sub"><a href="#dictionaries">Dictionaries</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+    </nav>
 
-    <div class="prose">
+    <div class="doc__main">
+      <header class="shead">
+        <p class="label"><a href="index.html">CACCHT Explorer guide</a></p>
+        <h1 class="shead__h">Adding texts</h1>
+      </header>
+
+      <div class="prose">
 <p>The library holds everything the Explorer can show: the corpora on your computer, those it can download, the translations and the dictionaries. Open it with <em>Texts → Add a text…</em> in Parallel, or <em>Open a corpus</em> in Panes.</p>
-<p><a href="images/library.png"><img src="images/library.png" alt="The library" loading="lazy"></a></p>
+<figure><a href="images/library.png"><img src="images/library.png" alt="The library" loading="lazy"></a><figcaption>The library</figcaption></figure>
 <h2 id="corpora-on-your-computer">Corpora on your computer</h2>
 <p>At the top, <em>Open a corpus</em> lists the corpora that are on your computer, in the folder where Text-Fabric keeps them (<code>text-fabric-data</code> in your home folder). <em>Open</em> opens one; <em>Show</em> shows one that is open already. <em>Find a corpus</em> narrows the list.</p>
 <p>The first time a corpus is opened, the program prepares it, which takes from half a minute to a few minutes; after that it opens in a few seconds. In this version, only the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls are offered.</p>
@@ -59,21 +64,19 @@
 <p><em>Can be downloaded</em> lists the corpora the program can get for you: the BHSA, the Samaritan Pentateuch and the Dead Sea Scrolls, from their own releases on GitHub. <em>Download</em> gets one, unpacks it and prepares it, with its progress shown. <em>Terms of use</em> links to the corpus&#39; own page. If a download fails, <em>Try again</em> tries again; downloads already made are kept, so nothing is downloaded twice.</p>
 <p>At the <a href="getting-started.html#the-first-start">first start</a> the program offers all three at once.</p>
 <h2 id="translations">Translations</h2>
-<p><em>Translations</em> lists the translations the program can add, each downloaded from its source and prepared on your computer. So far there is one: the <a href="datasets.html#the-jps-1917-translation">JPS 1917</a>, from Sefaria (about 5 MB). <em>Add</em> downloads and prepares it, in a few seconds; it then appears as a text next to the Hebrew.</p>
+<p><em>Translations</em> lists the translations the program can add, each downloaded from its source and prepared on your computer. There are two: the <a href="datasets.html#the-jps-1917-translation">JPS 1917</a> in English, from Sefaria (about 5 MB), and the <a href="datasets.html#the-statenvertaling">Statenvertaling</a> in Dutch, from GitHub (about 30 MB). <em>Add</em> downloads and prepares one, in a few seconds to half a minute; it then appears as a text next to the Hebrew.</p>
 <p><em>Remove</em> (and <em>Remove</em> again to confirm) deletes it. If it is open, it is removed the next time the program starts, and until then <em>Keep it</em> undoes the removal.</p>
 <p>What a translation does in the interfaces:</p>
 <ul>
-<li>in Parallel and the Reader it is a column like the others, with the print&#39;s verse number where the 1917 print numbers otherwise;</li>
+<li>in Parallel and the Reader it is a column like the others, with the print&#39;s verse number where the translation numbers otherwise; the Statenvertaling shows its added words in italics and its <em>Kanttekeningen</em> under each verse;</li>
 <li>in the Interlinear, <em>Under</em> offers it as a line per verse;</li>
-<li>in the Concordance it can be searched in English (<code>word lower=lord</code>);</li>
+<li>in the Concordance it can be searched in its own language (<code>word lower=lord</code>, <code>word lower=heere</code>);</li>
 <li>it has no hover card, and it is left out of <em>Differences</em>.</li>
 </ul>
 <h2 id="dictionaries">Dictionaries</h2>
 <p><em>Dictionaries</em> lists the dictionaries the program can add. So far there is one: <a href="datasets.html#the-bdb-dictionary">BDB</a> (about 5 MB). <em>Add</em> downloads it; <em>Remove</em> deletes it. Once it is added, its entries appear in the <a href="words.html#bdb">lexicon</a>, on the hover card, in the word panel and in the Interlinear.</p>
-
-      <h2>Contents of the guide</h2>
-      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><a href="searching.html">Searching</a></li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li>Adding texts</li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
 <nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="asking-claude.html"><span>Previous:</span> Asking Claude or ChatGPT</a><a rel="next" href="notes-and-citing.html"><span>Next:</span> Notes, workspaces and citing</a></nav>
+      </div>
     </div>
   </div>
 </section>
@@ -98,7 +101,5 @@
     </nav>
   </div>
 </footer>
-
-<script src="../assets/js/site.js" defer></script>
 </body>
 </html>
