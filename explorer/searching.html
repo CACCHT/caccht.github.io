@@ -16,9 +16,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Hebrew:wght@400;600&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
-<style>main table{display:block;overflow-x:auto;border-collapse:collapse;margin:1.25rem 0}main th,main td{text-align:left;vertical-align:top;padding:.35rem 1rem .35rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}main th{font-weight:600}main .prose img{max-width:100%;height:auto;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:4px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,17 +41,23 @@
 
 <main id="main">
 
-<section class="band band--parch">
-  <div class="wrap">
-    <header class="shead shead--dark">
-      <p class="label">CACCHT Explorer · Guide</p>
-      <h1 class="shead__h">Searching</h1>
-    </header>
+<section class="band">
+  <div class="wrap doc">
+    <nav class="toc" aria-label="Contents of the guide">
+      <p class="toc__h">CACCHT Explorer guide</p>
+      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li><span class="is-here" aria-current="page">Searching</span></li><li class="sub"><a href="#templates">Templates</a></li><li class="sub"><a href="#search-terms">Search terms</a></li><li class="sub"><a href="#results">Results</a></li><li class="sub"><a href="#limits">Limits</a></li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
+    </nav>
 
-    <div class="prose">
+    <div class="doc__main">
+      <header class="shead">
+        <p class="label"><a href="index.html">CACCHT Explorer guide</a></p>
+        <h1 class="shead__h">Searching</h1>
+      </header>
+
+      <div class="prose">
 <p>The Explorer searches with <strong>search templates</strong>, the search language of Text-Fabric. A template describes what you look for, one object per line: a word with certain features, a phrase with a certain function, a clause that contains both. You can write one yourself, have one made from words you click (<em>Search terms</em>), or <a href="asking-claude.html">ask Claude or ChatGPT</a> for one. <a href="search-examples.html">Search examples</a> has fifty templates to start from.</p>
 <p>In Parallel, <em>Search</em> in the top bar opens the search, which shows each result as a verse in all the texts. Panes have a <em>Search</em> view, and the <a href="concordance.html">Concordance</a> shows results as lines with the hit in the middle. A search goes along when you switch between them.</p>
-<p><a href="images/search.png"><img src="images/search.png" alt="Search in Parallel: the infinitives construct of הלך in the BHSA" loading="lazy"></a></p>
+<figure><a href="images/search.png"><img src="images/search.png" alt="Search in Parallel: the infinitives construct of הלך in the BHSA" loading="lazy"></a><figcaption>Search in Parallel: the infinitives construct of הלך in the BHSA</figcaption></figure>
 <h2 id="templates">Templates</h2>
 <p><em>Search</em> opens on <em>Template</em>. Choose the text under <em>Search in</em>, write the template, and click <em>Search</em> (or press <em>Ctrl+Enter</em>).</p>
 <h3 id="one-line-words-with-features">One line: words with features</h3>
@@ -198,7 +203,7 @@ w1 &lt;: w2
 <li><em>All in one</em> chooses whether the terms must be in one verse, clause or phrase; <em>Books</em> limits the search to some books.</li>
 <li>Click <em>Search</em>.</li>
 </ol>
-<p><a href="images/search-terms.png"><img src="images/search-terms.png" alt="A search term made from לֶךְ in Genesis 12:1, with its lexeme and stem ticked" loading="lazy"></a></p>
+<figure><a href="images/search-terms.png"><img src="images/search-terms.png" alt="A search term made from לֶךְ in Genesis 12:1, with its lexeme and stem ticked" loading="lazy"></a><figcaption>A search term made from לֶךְ in Genesis 12:1, with its lexeme and stem ticked</figcaption></figure>
 <p>The template the terms make is shown under them. Switching to <em>Template</em> puts it in the editor, to change it further. Terms are kept while the program is open, not in links or workspaces.</p>
 <p>In the Reader, the <em>Search</em> tab of the panel and <em>Add as search term</em> open the search in Parallel.</p>
 <h2 id="results">Results</h2>
@@ -215,7 +220,7 @@ w1 &lt;: w2
 <li><strong>results per book</strong> (or per chapter), in the order of the text; click a bar to read that book or chapter.</li>
 </ul>
 <p>Each chart has <em>Show as table</em>. Write a feature with <code>*</code> and no value in the template (<code>word lex=HLK[ vs*</code>) to count it without limiting the search: it is offered first.</p>
-<p><a href="images/statistics.png"><img src="images/statistics.png" alt="The statistics of a search" loading="lazy"></a></p>
+<figure><a href="images/statistics.png"><img src="images/statistics.png" alt="The statistics of a search" loading="lazy"></a><figcaption>The statistics of a search</figcaption></figure>
 <h3 id="downloading">Downloading</h3>
 <p><em>Download…</em> saves the results as a spreadsheet: one row per result, with its passage and, for each line of the template, its text and its features. The features in the template are always included; tick more in the list. <em>TSV for Excel</em> is a file that Excel opens with the Hebrew intact; <em>TSV</em> is for other programs.</p>
 <p><em>Cite</em> gives a citation of the search: the corpus and its version, the template, the number of results, and the versions of the Explorer and Context-Fabric.</p>
@@ -227,10 +232,8 @@ w1 &lt;: w2
 <li>The program keeps the last 100 searches. An older link runs its search again.</li>
 </ul>
 <p>With <code>cfabric-browser</code> on the command line, <code>--timeout</code>, <code>--max-results</code> and <code>--workers</code> change these limits.</p>
-
-      <h2>Contents of the guide</h2>
-      <ol><li><a href="index.html">Guide to CACCHT Explorer</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="datasets.html">The datasets</a></li><li><a href="interfaces.html">The five ways of working</a></li><li><a href="reading.html">Reading and comparing</a></li><li><a href="words.html">Words</a></li><li>Searching</li><li><a href="search-examples.html">Search examples</a></li><li><a href="concordance.html">The Concordance</a></li><li><a href="asking-claude.html">Asking Claude or ChatGPT</a></li><li><a href="adding-texts.html">Adding texts</a></li><li><a href="notes-and-citing.html">Notes, workspaces and citing</a></li><li><a href="problems.html">Questions and problems</a></li></ol>
 <nav class="guide-pn" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap" aria-label="Previous and next"><a rel="prev" href="words.html"><span>Previous:</span> Words</a><a rel="next" href="search-examples.html"><span>Next:</span> Search examples</a></nav>
+      </div>
     </div>
   </div>
 </section>
@@ -255,7 +258,5 @@ w1 &lt;: w2
     </nav>
   </div>
 </footer>
-
-<script src="../assets/js/site.js" defer></script>
 </body>
 </html>

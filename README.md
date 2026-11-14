@@ -33,8 +33,10 @@ the files are published exactly as they are.
 ```
 index.html          the page
 data-use.html       the data-use (licensing) statement
+search-examples.html 50 search templates for the BHSA
+explorer/           the CACCHT Explorer guide, built from context-fabric
+                    (libs/explorer/guide, frontend/scripts/guide.mjs)
 assets/css/site.css styles
-assets/js/site.js   script specimen and scroll reveals
 assets/*.png        the CACCHT logo and favicons
 robots.txt          crawling rules, points at the sitemap
 sitemap.xml         the site's URLs, for search engines
