@@ -311,6 +311,22 @@ a:hover { color: var(--accent-dark); }
 .tool__h { display: block; font-family: var(--f-head); font-weight: 600; font-size: 1.15rem; color: var(--accent); margin-bottom: 0.35rem; }
 .tool__p { display: block; font-size: 0.97rem; }
 .tool__go { color: var(--accent); white-space: nowrap; }
+/* a tool shown with a screenshot, above the grid */
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 900px) { .feature { grid-template-columns: minmax(0, 1fr); } }
+.shot { margin: 0; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(28, 27, 26, 0.12);
+}
+.shot figcaption { font-family: var(--f-head); font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
 
 /* ── Publications ────────────────────────────────────── */
 
